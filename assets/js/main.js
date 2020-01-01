@@ -66,7 +66,7 @@ jQuery(document).ready(function($) {
     new GitHubCalendar("#github-graph", "jihoonkim-tech");
     
     
-    /* Github Activity Feed - https://github.com/caseyscarborough/github-activity */
+    /* Github Activity Feed - https://github.com/caseyscarborough/github-activitys */
     GitHubActivity.feed({ username: "jihoonkim-tech", selector: "#ghfeed" });
 
 

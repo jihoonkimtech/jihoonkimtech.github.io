@@ -82,14 +82,13 @@
                 <section class="github section">
                     <div class="section-inner">
                         <h2 class="heading">My GitHub</h2>
-                        <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget. 
-                        
-                        <div id="github-graph" class="github-graph">
+                        <p>깃허브 커밋 현황 
+                        <div id="github-graph" class="github-graph"> new GitHubCalendar("#github-graph", "jihoonkim-tech");
                         </div><!--//github-graph-->
 
-                        <p>You can also embed your GitHub activities using Casey Scarborough's <a href="https://caseyscarborough.com/projects/github-activity/" target="_blank">GitHub Activity Stream</a> widget.        
+                        <p>깃허브 활동        
                         <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->                       
-                        <div id="ghfeed" class="ghfeed">
+                        <div id="ghfeed" class="ghfeed"> GitHubActivity.feed({ username: "jihoonkim-tech", selector: "#ghfeed" });
                         </div><!--//ghfeed-->
                         
                     </div><!--//secton-inner-->
