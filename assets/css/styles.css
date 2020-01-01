@@ -32,7 +32,7 @@ a {
 a:hover {
   text-decoration: underline;
   color: #5f6b77;
-  color: #2d844e;
+  color: #FF5E00;
 }
 
 a:focus {
@@ -68,8 +68,8 @@ a.btn-cta-primary, .btn-cta-primary {
 }
 
 a.btn-cta-primary:hover, .btn-cta-primary:hover {
-  background: #49ac43;
-  border: 1px solid #49ac43;
+  background: #810000;
+  border: 1px solid #810000;
   color: #fff;
 }
 
@@ -118,8 +118,8 @@ a.dotted-link:hover {
 /* ======= Header ======= */
 .header {
   padding: 30px 0;
-  background: #FFB85A;
-  border-top: 10px solid #930000;
+  background: #FFEE90;
+  border-top: 10px solid #4B0000;
 }
 
 .header .btn {
@@ -476,7 +476,7 @@ a.dotted-link:hover {
 }
 
 .testimonials .item .quote .svg-inline--fa {
-  color: #79d19a;
+  color: #FF9436;
   margin-right: 15px;
 }
 
