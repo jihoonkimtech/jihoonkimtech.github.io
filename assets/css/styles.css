@@ -9,7 +9,7 @@
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
-  background: #FFDC7E;
+  background: #313d3e;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -60,8 +60,8 @@ a:focus {
 }
 
 a.btn-cta-primary, .btn-cta-primary {
-  background: #FF5E00;
-  border: 1px solid #FF5E00;
+  background: #313d3e;
+  border: 1px solid #ffffff;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -118,8 +118,8 @@ a.dotted-link:hover {
 /* ======= Header ======= */
 .header {
   padding: 30px 0;
-  background: #FFEE90;
-  border-top: 10px solid #4B0000;
+  background: #e8511a;
+  border-top: 10px solid #32383e;
 }
 
 .header .btn {
@@ -132,14 +132,14 @@ a.dotted-link:hover {
 }
 
 .header .profile-content .name {
-  color: #49515a;
+  color: #ffffff;
   font-size: 38px;
   margin-bottom: 5px;
   margin-top: 30px;
 }
 
 .header .profile-content .desc {
-  color: #778492;
+  color: #e4e4e4;
   font-family: "Lato", arial, sans-serif;
   font-weight: 400;
   font-size: 24px;
