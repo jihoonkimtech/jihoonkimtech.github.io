@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #FF9436;
+  color: #e8511a;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -450,7 +450,7 @@ element.style {
 
 .skills .skillset .level-bar-inner {
   height: 15px;
-  background: #FF9436;
+  background: #e8511a;
 }
 
 .skills .svg-inline--fa {
@@ -545,7 +545,7 @@ element.style {
 }
 
 .languages .item .svg-inline--fa {
-  color: #FF9436;
+  color: #e8511a;
 }
 
 /* Blog Section */
@@ -625,7 +625,7 @@ element.style {
 
 /* ======= Footer ======= */
 .footer {
-  background: #32383e;
+  background: #283233;
   color: #fff;
   padding: 10px 0;
 }
