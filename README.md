@@ -1,2 +1,4 @@
 # KimJH-Hanul.github.io
-Portfolio Site Web Server
+jihoonkimtech's Portfolio Site 
+
+[Site Link](https://jihoonkimtech.github.io/)
