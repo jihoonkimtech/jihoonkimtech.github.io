@@ -12,6 +12,17 @@ $(window).on('load', function() {
 
 });
 
+GitHubCalendar(".calendar", "jihoonkimtech", {
+    responsive: true,
+    tooltips: true
+});
+
+GitHubActivity.feed({
+	username: "jihoonkimtech",
+	selector: "#feed",
+	limit: 20 // optional
+});
+
 
 jQuery(document).ready(function($) {
 
@@ -62,12 +73,7 @@ jQuery(document).ready(function($) {
         }
     );
     
-    /* Github Calendar - https://github.com/IonicaBizau/github-calendar */
-    new GitHubCalendar("#github-graph", "jihoonkimtech");
     
-    
-    /* Github Activity Feed - https://github.com/caseyscarborough/github-activitys */
-    GitHubActivity.feed({ username: "jihoonkimtech", selector: "#ghfeed" });
 
 
 });
