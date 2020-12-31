@@ -138,6 +138,7 @@ element.style {
 
 /* ======= Header ======= */
 .header {
+  border-top-width: 0px;
   padding: 20px 0;
   background: #e8511a;
   border-top: 10px solid #32383e;
