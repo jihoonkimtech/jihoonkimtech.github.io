@@ -17,12 +17,6 @@ GitHubCalendar(".calendar", "jihoonkimtech", {
     tooltips: true
 });
 
-GitHubActivity.feed({
-	username: "jihoonkimtech",
-	selector: "#feed",
-	limit: 20 // optional
-});
-
 
 jQuery(document).ready(function($) {
 

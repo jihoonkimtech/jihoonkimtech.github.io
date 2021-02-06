@@ -8,7 +8,7 @@
 */
 @charset 'UTF-8'; 
 
-@import url(../../dist/github-calendar-responsive.css);
+@import url(../../assets/plugins/github-calendar/github-calendar-responsive.css);
 @import url(https://unpkg.com/bag.css@1.0.12/dist/bag.fixed.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github.min.css);
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
@@ -695,4 +695,10 @@ element.style {
     width: 1360px;
     max-width: inherit;
   }
+}
+
+#feed{
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
 }
