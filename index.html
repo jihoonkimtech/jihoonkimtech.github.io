@@ -27,9 +27,7 @@
       href="assets/plugins/github-calendar/github-calendar-responsive.css"
     />
     
-    
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <link rel="stylesheet" href="assets/css/github-activity.css">
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     
@@ -533,8 +531,9 @@
                         <div class="calendar"></div>
                         <p>    
                         <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->                       
-                        <div id="feed" ></div>
-                        <iframe allowtransparency="true" frameborder="0" scrolling="no" seamless="seamless" src="https://jihoonkimtech.github.io/assets/git_activity/gh-activity.html?user=jihoonkimtech&type=user" width="300" height="300"></iframe>
+                        <div id="feed">
+                            <iframe allowtransparency="true" frameborder="0" scrolling="no" seamless="seamless" src="https://jihoonkimtech.github.io/assets/git_activity/gh-activity.html?user=jihoonkimtech&type=user"   height="100%" width="100%"></iframe>
+                        </div>
                     </div><!--//secton-inner-->
                 </section><!--//section-->
             </div><!--//primary-->
@@ -551,7 +550,6 @@
     </footer><!--//footer-->
  
     <script>
-        cal.querySelector(".float-left").innerHTML = options.summary_text;
         new GitHubCalendar(".calendar", "jihoonkimtech", { responsive: true });
     </script>
     
