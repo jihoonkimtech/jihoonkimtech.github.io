@@ -32,7 +32,6 @@
     <link rel="stylesheet" href="assets/css/github-activity.css">
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/js/github-activity.js"></script>
     
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
@@ -535,6 +534,7 @@
                         <p>    
                         <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->                       
                         <div id="feed" ></div>
+                        <iframe allowtransparency="true" frameborder="0" scrolling="no" seamless="seamless" src="https://jihoonkim-tech.github.io/assets/git_activity/gh-activity.html?user=jihoonkimtech&type=user" width="300" height="300"></iframe>
                     </div><!--//secton-inner-->
                 </section><!--//section-->
             </div><!--//primary-->
@@ -551,7 +551,8 @@
     </footer><!--//footer-->
  
     <script>
-        GitHubCalendar(".calendar", "jihoonkimtech", { responsive: true });
+        cal.querySelector(".float-left").innerHTML = options.summary_text;
+        new GitHubCalendar(".calendar", "jihoonkimtech", { responsive: true });
     </script>
     
     <!-- Javascript -->          
@@ -561,7 +562,6 @@
     <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
     <!-- github activity plugin -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>            
     
