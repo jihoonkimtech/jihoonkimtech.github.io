@@ -18,18 +18,15 @@
     
         <!-- Include the library. -->
     <script
-      src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+      src="assets/plugins/github-calendar/github-calendar.min.js">
     </script>
 
     <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+      href="assets/plugins/github-calendar/github-calendar-responsive.css"
     />
     
-    <script>
-          new GitHubCalendar(".calendar", "jihoonkimtech", { responsive: true });
-    </script>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
     <link rel="stylesheet" href="assets/css/github-activity.css">
@@ -50,7 +47,7 @@
             <div class="profile-content float-left">
                 <h1 class="name" style="text-shadow: 0 0 6px black;">김지훈</h1>
                 <h2 class="desc" style="text-shadow: 0 0 6px black;">Maker, Amateur Developer</h2>   
-	    <ul class="social list-inline">                
+	            <ul class="social list-inline">                
                     <li class="list-inline-item"><a href="https://www.linkedin.com/in/%EC%A7%80%ED%9B%88-%EA%B9%80-7757221a1/"><i class="fab fa-linkedin-in"></i></a></li>
                     <li class="list-inline-item"><a href="https://github.com/jihoonkimtech"><i class="fab fa-github-alt"></i></a></li>    
                     <li class="list-inline-item"><a href="https://stackoverflow.com/users/12846041/jihoonkimtech?tab=profile"><i class="fab fa-stack-overflow"></i></a></li>   
@@ -549,17 +546,19 @@
     <footer class="footer">
         <div class="container text-center">
                 <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-                <small class="copyright">Designed with <a href="https://jihoonkim-tech.github.io/" target="_blank">JihoonKim</a> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+                <small class="copyright">Designed with <a href="https://jihoonkim-tech.github.io/" target="_blank">Jihoon Kim</a> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
         </div><!--//container-->
     </footer><!--//footer-->
  
+    <script>
+        GitHubCalendar(".calendar", "jihoonkimtech", { responsive: true });
+    </script>
+    
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="assets/plugins/popper.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
     <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
-    <!-- github calendar plugin -->
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
     <!-- github activity plugin -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
