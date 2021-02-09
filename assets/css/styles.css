@@ -702,3 +702,11 @@ element.style {
     margin: 0 auto;
     text-align: center;
 }
+
+#gravatar
+{
+  width:20%;
+  float:left;
+  padding-left:10px;
+  text-align: center;
+}
