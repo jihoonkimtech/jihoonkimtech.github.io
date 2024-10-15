@@ -155,7 +155,7 @@ element.style {
 
 .header .profile-content .name {
   color: #ffffff;
-  font-size: 38px;
+  font-size: 34px;
   margin-bottom: 5px;
   margin-top: 30px;
 }
@@ -164,7 +164,7 @@ element.style {
   color: #e4e4e4;
   font-family: "Gothic A1", arial, sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 0;
   margin-bottom: 15px;
 }
