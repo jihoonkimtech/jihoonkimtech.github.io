@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍길동 | 포트폴리오</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <script src="/assets/js/index.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-700">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- 1. 인적사항 -->
+        <header class="text-center mb-12">
+            <!-- 프로필 사진 공간 -->
+            <img 
+                src="https://placehold.co/160x160/E2E8F0/4A5568?text=Profile%0AImage" 
+                alt="프로필 사진" 
+                class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-white shadow-lg object-cover"
+                onerror="this.onerror=null;this.src='https://placehold.co/160x160/E2E8F0/4A5568?text=Image%0ANot%20Found';"
+            >
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-2">
+                <!-- 이름 -->
+                홍길동
+            </h1>
+            <p class="text-xl text-indigo-600 font-semibold">
+                <!-- 직무/소개 -->
+                열정적인 신입 개발자
+            </p>
+            <div class="mt-6 flex justify-center items-center space-x-6 text-gray-600">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="mail" class="w-5 h-5 text-indigo-500"></i>
+                    <span>
+                        <!-- 이메일 -->
+                        hong.gildong@example.com
+                    </span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="phone" class="w-5 h-5 text-indigo-500"></i>
+                    <span>
+                        <!-- 전화번호 -->
+                        010-1234-5678
+                    </span>
+                </div>
+            </div>
+            <div class="mt-4 flex justify-center space-x-4">
+                <!-- SNS 링크 -->
+                <a href="https://github.com/your-id" target="_blank" class="text-gray-500 hover:text-gray-900">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+                <a href="https://instagram.com/your-id" target="_blank" class="text-gray-500 hover:text-pink-500">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                </a>
+                <a href="https://your-blog.tistory.com" target="_blank" class="text-gray-500 hover:text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.235 12.235c-1.35 0-2.443 1.093-2.443 2.443s1.093 2.443 2.443 2.443 2.443-1.093 2.443-2.443-1.093-2.443-2.443-2.443zm4.943-.443c0-1.06-.52-2.02-1.39-2.61l-3.3-2.19c-.19-.13-.43-.2-.68-.2h-3.61c-.25 0-.49.07-.68.2l-3.3 2.19c-.87.59-1.39 1.55-1.39 2.61v4.88c0 1.06.52 2.02 1.39 2.61l3.3 2.19c.19.13.43.2.68.2h3.61c.25 0 .49-.07.68-.2l3.3-2.19c.87-.59 1.39-1.55 1.39-2.61v-4.88zm-6.29 6.29h-3.61c-.08 0-.15-.02-.2-.05l-3.3-2.19c-.58-.39-.93-1.02-.93-1.7v-4.88c0-.68.35-1.31.93-1.7l3.3-2.19c.05-.03.12-.05.2-.05h3.61v12.76zm4.94-1.22l-3.3 2.19c-.05.03-.12.05-.2.05h-3.61V7.005h3.61c.08 0 .15.02.2.05l3.3 2.19c.58.39.93 1.02.93 1.7v4.88c0 .68-.35 1.31-.93 1.7z"/></svg>
+                </a>
+            </div>
+        </header>
+
+        <main class="space-y-12">
+            <!-- 2. 학력 -->
+            <section>
+                <h2 class="section-title">학력 (Education)</h2>
+                <div class="space-y-4">
+                    <div class="card">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 대학명 -->
+                                    OO대학교
+                                </h3>
+                                <p class="text-md text-gray-600">
+                                    <!-- 전공 -->
+                                    컴퓨터공학과 재학
+                                </p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded">
+                                <!-- 기간 -->
+                                2022.03 ~ 현재
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                         <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 고등학교명 -->
+                                    OO고등학교 졸업
+                                </h3>
+                                <p class="text-md text-gray-600">
+                                    <!-- 계열 -->
+                                    이과
+                                </p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded">
+                                <!-- 기간 -->
+                                2019.03 ~ 2022.02
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 소속 -->
+            <section>
+                <h2 class="section-title">소속 (Affiliation)</h2>
+                 <div class="space-y-4">
+                    <div class="card">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 현재 소속 -->
+                                    IT 동아리 '코딩 버그'
+                                </h3>
+                                <p class="text-md text-gray-600">
+                                    <!-- 역할 -->
+                                    웹 프론트엔드 팀원
+                                </p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded">
+                                <!-- 기간 -->
+                                2023.03 ~ 현재
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                         <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 이전 소속 -->
+                                    학생회
+                                </h3>
+                                <p class="text-md text-gray-600">
+                                    <!-- 역할 -->
+                                    홍보부 차장
+                                </p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded">
+                                <!-- 기간 -->
+                                2022.03 ~ 2023.02
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 자격증 -->
+            <section>
+                <h2 class="section-title">자격증 (Certifications)</h2>
+                <div class="card">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>
+                            <span class="font-semibold">
+                                <!-- 자격증명 -->
+                                정보처리기사
+                            </span> - 
+                            <span class="text-gray-600">
+                                <!-- 취득일 -->
+                                2023.05.20
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-semibold">
+                                <!-- 자격증명 -->
+                                SQL 개발자(SQLD)
+                            </span> - 
+                            <span class="text-gray-600">
+                                <!-- 취득일 -->
+                                2022.11.19
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 5. 기술 레벨 -->
+            <section>
+                <h2 class="section-title">기술 (Skills)</h2>
+                <div class="card space-y-6">
+                    <!-- 기술 그룹 1 -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Programming Languages</h3>
+                        <div class="space-y-3">
+                            <!-- 기술 1 -->
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">C / C++</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">70%</span>
+                            </div>
+                            <!-- 기술 2 -->
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">Python</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">85%</span>
+                            </div>
+                             <!-- 기술 3 -->
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">JavaScript</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- 기술 그룹 2 -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Frontend</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">React</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 75%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">75%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">Tailwind CSS</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 90%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 6. 수상 내역 -->
+            <section>
+                <h2 class="section-title">수상 내역 (Awards)</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- 수상 1 -->
+                    <div class="card">
+                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full">
+                            <!-- 수상명 -->
+                            최우수상
+                        </span>
+                        <h3 class="font-bold text-xl text-gray-800 my-2">
+                            <!-- 대회 이름 -->
+                            OO대학교 SW 경진대회
+                        </h3>
+                        <p class="font-semibold text-gray-600 mb-2">
+                            <!-- 작품 이름 -->
+                            실시간 주차 공간 안내 시스템
+                        </p>
+                        <p class="text-sm">
+                            <!-- 작품 설명 -->
+                            IoT 센서와 웹캠을 활용하여 교내 주차장의 빈자리를 실시간으로 파악하고, 사용자에게 웹/앱으로 정보를 제공하는 서비스입니다.
+                        </p>
+                    </div>
+                    <!-- 수상 2 -->
+                    <div class="card">
+                        <span class="text-sm font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full">
+                           <!-- 수상명 -->
+                           장려상
+                        </span>
+                         <h3 class="font-bold text-xl text-gray-800 my-2">
+                            <!-- 대회 이름 -->
+                            정부 주최 공공데이터 활용 공모전
+                        </h3>
+                        <p class="font-semibold text-gray-600 mb-2">
+                            <!-- 작품 이름 -->
+                            우리 동네 안전 지도
+                        </p>
+                        <p class="text-sm">
+                            <!-- 작품 설명 -->
+                            공공 API를 활용하여 범죄율, 가로등 위치 등의 데이터를 시각화하고, 사용자가 설정한 경로의 안전도를 점수로 알려주는 웹 서비스입니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 7. 참여 프로젝트 -->
+            <section>
+                <h2 class="section-title">프로젝트 (Projects)</h2>
+                <div class="space-y-6">
+                    <!-- 프로젝트 1 -->
+                    <div class="card">
+                         <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-xl text-gray-800">
+                                <!-- 프로젝트 이름 -->
+                                개인 포트폴리오 사이트 제작
+                            </h3>
+                            <span class="text-sm font-medium text-gray-500">
+                                <!-- 날짜 -->
+                                2024.01 ~ 2024.02
+                            </span>
+                        </div>
+                        <p class="text-indigo-600 font-semibold mb-3">
+                            <!-- 참여 분야 -->
+                            Frontend, Design
+                        </p>
+                        <p>
+                            <!-- 설명 -->
+                            자신을 소개하고 프로젝트 경험을 정리하기 위해 HTML, CSS, JavaScript를 사용하여 직접 디자인하고 개발한 개인 웹사이트입니다. 반응형 디자인을 적용하여 다양한 기기에서 최적의 화면을 제공합니다.
+                        </p>
+                    </div>
+                     <!-- 프로젝트 2 -->
+                    <div class="card">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-xl text-gray-800">
+                                <!-- 프로젝트 이름 -->
+                                동아리 스터디 관리 플랫폼
+                            </h3>
+                            <span class="text-sm font-medium text-gray-500">
+                                <!-- 날짜 -->
+                                2023.09 ~ 2023.12
+                            </span>
+                        </div>
+                        <p class="text-sky-600 font-semibold mb-3">
+                            <!-- 참여 분야 -->
+                            Backend, Database
+                        </p>
+                        <p>
+                            <!-- 설명 -->
+                            동아리 내 스터디 그룹의 생성, 참여, 과제 제출 및 평가를 관리하는 웹 플랫폼입니다. Node.js와 Express를 사용하여 API 서버를 구축하고, MySQL로 데이터를 관리했습니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-12 py-6 border-t">
+            <p class="text-gray-500">© 2024. <!-- 이름 -->. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

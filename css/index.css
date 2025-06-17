@@ -1,0 +1,9 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.section-title {
+    @apply text-2xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-indigo-500;
+}
+.card {
+    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300;
+}
