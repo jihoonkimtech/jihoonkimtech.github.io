@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홍길동 | 포트폴리오</title>
+    <title>김지훈 | 포트폴리오</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="/assets/css/index.css">
-    <script src="/assets/js/index.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-700">
 
@@ -17,45 +16,45 @@
         <header class="text-center mb-12">
             <!-- 프로필 사진 공간 -->
             <img 
-                src="https://placehold.co/160x160/E2E8F0/4A5568?text=Profile%0AImage" 
+                src="assets/img/profile2.png" 
                 alt="프로필 사진" 
                 class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-white shadow-lg object-cover"
                 onerror="this.onerror=null;this.src='https://placehold.co/160x160/E2E8F0/4A5568?text=Image%0ANot%20Found';"
             >
             <h1 class="text-5xl font-extrabold text-gray-900 mb-2">
                 <!-- 이름 -->
-                홍길동
+                김지훈
             </h1>
             <p class="text-xl text-indigo-600 font-semibold">
                 <!-- 직무/소개 -->
-                열정적인 신입 개발자
+                A passionate C.E. student
             </p>
             <div class="mt-6 flex justify-center items-center space-x-6 text-gray-600">
                 <div class="flex items-center space-x-2">
                     <i data-lucide="mail" class="w-5 h-5 text-indigo-500"></i>
                     <span>
                         <!-- 이메일 -->
-                        hong.gildong@example.com
+                        jihoonkimtech@gamil.com
                     </span>
                 </div>
                 <div class="flex items-center space-x-2">
                     <i data-lucide="phone" class="w-5 h-5 text-indigo-500"></i>
                     <span>
                         <!-- 전화번호 -->
-                        010-1234-5678
+                        010-5219-4270
                     </span>
                 </div>
             </div>
             <div class="mt-4 flex justify-center space-x-4">
                 <!-- SNS 링크 -->
-                <a href="https://github.com/your-id" target="_blank" class="text-gray-500 hover:text-gray-900">
+                <a href="https://github.com/jihoonkimtech" target="_blank" class="text-gray-500 hover:text-gray-900">
                     <i data-lucide="github" class="w-6 h-6"></i>
                 </a>
-                <a href="https://instagram.com/your-id" target="_blank" class="text-gray-500 hover:text-pink-500">
+                <a href="https://instagram.com/jihoonkimtech" target="_blank" class="text-gray-500 hover:text-pink-500">
                     <i data-lucide="instagram" class="w-6 h-6"></i>
                 </a>
-                <a href="https://your-blog.tistory.com" target="_blank" class="text-gray-500 hover:text-gray-900">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.235 12.235c-1.35 0-2.443 1.093-2.443 2.443s1.093 2.443 2.443 2.443 2.443-1.093 2.443-2.443-1.093-2.443-2.443-2.443zm4.943-.443c0-1.06-.52-2.02-1.39-2.61l-3.3-2.19c-.19-.13-.43-.2-.68-.2h-3.61c-.25 0-.49.07-.68.2l-3.3 2.19c-.87.59-1.39 1.55-1.39 2.61v4.88c0 1.06.52 2.02 1.39 2.61l3.3 2.19c.19.13.43.2.68.2h3.61c.25 0 .49-.07.68-.2l3.3-2.19c.87-.59 1.39-1.55 1.39-2.61v-4.88zm-6.29 6.29h-3.61c-.08 0-.15-.02-.2-.05l-3.3-2.19c-.58-.39-.93-1.02-.93-1.7v-4.88c0-.68.35-1.31.93-1.7l3.3-2.19c.05-.03.12-.05.2-.05h3.61v12.76zm4.94-1.22l-3.3 2.19c-.05.03-.12.05-.2.05h-3.61V7.005h3.61c.08 0 .15.02.2.05l3.3 2.19c.58.39.93 1.02.93 1.7v4.88c0 .68-.35 1.31-.93 1.7z"/></svg>
+                <a href="https://jihoonkimtech.tistory.com" target="_blank" class="text-gray-500 hover:text-gray-900">
+                    <i data-lucide="notebook-text" class="w-6 h-6"></i>
                 </a>
             </div>
         </header>
@@ -63,41 +62,77 @@
         <main class="space-y-12">
             <!-- 2. 학력 -->
             <section>
-                <h2 class="section-title">학력 (Education)</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-indigo-500">학력 (Education)</h2>
                 <div class="space-y-4">
-                    <div class="card">
-                        <div class="flex justify-between items-start">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
                             <div>
                                 <h3 class="font-bold text-lg text-gray-800">
                                     <!-- 대학명 -->
-                                    OO대학교
+                                    광운대학교
                                 </h3>
                                 <p class="text-md text-gray-600">
                                     <!-- 전공 -->
-                                    컴퓨터공학과 재학
+                                    컴퓨터정보공학부 지능컴퓨팅시스템전공
                                 </p>
                             </div>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded">
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
                                 <!-- 기간 -->
-                                2022.03 ~ 현재
+                                2021.03 ~ 현재
                             </span>
                         </div>
                     </div>
-                    <div class="card">
-                         <div class="flex justify-between items-start">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
                             <div>
                                 <h3 class="font-bold text-lg text-gray-800">
                                     <!-- 고등학교명 -->
-                                    OO고등학교 졸업
+                                    경민IT고등학교 졸업
                                 </h3>
                                 <p class="text-md text-gray-600">
                                     <!-- 계열 -->
-                                    이과
+                                    디지털미디어과
                                 </p>
                             </div>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded">
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
                                 <!-- 기간 -->
-                                2019.03 ~ 2022.02
+                                2018.03 ~ 2021.02
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 고등학교명 -->
+                                    특성화고 디지털 인재 육성 과정 수료
+                                </h3>
+                                <p class="text-md text-gray-600">
+                                    <!-- 계열 -->
+                                    신한금융그룹
+                                </p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                                <!-- 기간 -->
+                                2019.03 ~ 2019.12
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 고등학교명 -->
+                                    하이스쿨 스타트업 스프링보드 수료
+                                </h3>
+                                <p class="text-md text-gray-600">
+                                    <!-- 계열 -->
+                                    경기지방중소벤처기업청
+                                </p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                                <!-- 기간 -->
+                                2018.11
                             </span>
                         </div>
                     </div>
@@ -106,41 +141,176 @@
 
             <!-- 3. 소속 -->
             <section>
-                <h2 class="section-title">소속 (Affiliation)</h2>
-                 <div class="space-y-4">
-                    <div class="card">
-                        <div class="flex justify-between items-start">
+                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-indigo-500">소속 (Affiliation)</h2>
+                <div class="space-y-5">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
                             <div>
                                 <h3 class="font-bold text-lg text-gray-800">
                                     <!-- 현재 소속 -->
-                                    IT 동아리 '코딩 버그'
+                                    광운대 전자연구회 (KITEL)
                                 </h3>
-                                <p class="text-md text-gray-600">
-                                    <!-- 역할 -->
-                                    웹 프론트엔드 팀원
-                                </p>
+                                <!-- 역할을 두 줄로 분리 -->
+                                <div class="text-md text-gray-600 mt-0">
+                                    45기 정회원 <span class="text-sm text-gray-600">(22' 기술부장 | 25' AVR 세미나 강연)</span>
+                                    <p class="text-sm text-gray-500">광운대학교 중앙 학술동아리</p>
+                                </div>
                             </div>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded">
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
                                 <!-- 기간 -->
-                                2023.03 ~ 현재
+                                2021.12 ~ 현재
                             </span>
                         </div>
                     </div>
-                    <div class="card">
-                         <div class="flex justify-between items-start">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
                             <div>
                                 <h3 class="font-bold text-lg text-gray-800">
                                     <!-- 이전 소속 -->
-                                    학생회
+                                    DG-Protector 
                                 </h3>
-                                <p class="text-md text-gray-600">
-                                    <!-- 역할 -->
-                                    홍보부 차장
-                                </p>
+                                <!-- 역할을 두 줄로 분리 -->
+                                <div class="text-md text-gray-700 mt-0">
+                                    팀장 <span class="text-sm text-gray-600">(임베디드 SW 개발 | 구조물 설계 | 앱 디자인)</span>
+                                    <p class="text-sm text-gray-500">착용형 모터 제어 자세 교정기 개발</p>
+                                </div>
                             </div>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded">
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
                                 <!-- 기간 -->
-                                2022.03 ~ 2023.02
+                                2025.01 ~ 2025.04
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 현재 소속 -->
+                                    도돌이표 플라스틱
+                                </h3>
+                                <!-- 역할을 두 줄로 분리 -->
+                                <div class="text-md text-gray-700 mt-0">
+                                    업사이클 엔지니어 <span class="text-sm text-gray-600">(장치 설계 및 제작 | 제품 모델링)</span>
+                                    <p class="text-sm text-gray-500">플라스틱 분쇄/사출기 제작, 빗/블록/S고리/키링 모델링</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                                <!-- 기간 -->
+                                2020.11 ~ 2025.01
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 이전 소속 -->
+                                    의정부몽실학교 (현 경기이룸학교)
+                                </h3>
+                                <!-- 역할을 두 줄로 분리 -->
+                                <div class="text-md text-gray-700 mt-0">
+                                    길잡이 교사 <span class="text-sm text-gray-600">(청소년 대상 HW/SW 교육 | 모델링 교육)</span>
+                                    <p class="text-sm text-gray-500">공학 관련 프로젝트 2회, 방과후 프로그램 4회 기획 및 운영</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                                <!-- 기간 -->
+                                2021.03 ~ 2022.12
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 이전 소속 -->
+                                    의정부드림메이커
+                                </h3>
+                                <!-- 역할을 두 줄로 분리 -->
+                                <div class="text-md text-gray-700 mt-0">
+                                    보조강사 <span class="text-sm text-gray-600">(HW/SW 교육 | 멘토링)</span>
+                                    <p class="text-sm text-gray-500">6개 청소년 팀에 대한 개발 교육 및 멘토링</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                                <!-- 기간 -->
+                                2021.03 ~ 2022.08
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 이전 소속 -->
+                                    야매공방
+                                </h3>
+                                <!-- 역할을 두 줄로 분리 -->
+                                <div class="text-md text-gray-700 mt-0">
+                                    개발자 <span class="text-sm text-gray-600">(임베디드 SW 개발 | HW 개발)</span>
+                                    <p class="text-sm text-gray-500">배터리 UPS, CO 음성경보기등 다양한 캠핑 제품 워킹 목업 개발</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                                <!-- 기간 -->
+                                2021.03 ~ 2022.07
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 이전 소속 -->
+                                    Bright
+                                </h3>
+                                <!-- 역할을 두 줄로 분리 -->
+                                <div class="text-md text-gray-700 mt-0">
+                                    팀장 <span class="text-sm text-gray-600">(임베디드 SW 개발 | 구조물 설계 | 발표)</span>
+                                    <p class="text-sm text-gray-500">점자블록 내장형 RFID 태그 신호등 신호알람 장치 개발</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                                <!-- 기간 -->
+                                2021.03 ~ 2021.06
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 이전 소속 -->
+                                    Dream Keeper
+                                </h3>
+                                <!-- 역할을 두 줄로 분리 -->
+                                <div class="text-md text-gray-700 mt-0">
+                                    팀장 <span class="text-sm text-gray-600">(임베디드 SW 개발 | HW 설계 | 발표)</span>
+                                    <p class="text-sm text-gray-500">주변 정보를 함께 안내하는 DID 자전거 산책로 표지판</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                                <!-- 기간 -->
+                                2019.06 ~ 2019.11
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800">
+                                    <!-- 이전 소속 -->
+                                    삼점일사 협동조합
+                                </h3>
+                                <!-- 역할을 두 줄로 분리 -->
+                                <div class="text-md text-gray-700 mt-0">
+                                    개발자 <span class="text-sm text-gray-600">(SW 개발 | Web 개발 | HW 개발)</span>
+                                    <p class="text-sm text-gray-500">쓰레기통 결합형 DID에 탑재될 거점별 광고 플랫폼</p>
+                                </div>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                                <!-- 기간 -->
+                                2018.03 ~ 2020.03
                             </span>
                         </div>
                     </div>
@@ -149,27 +319,77 @@
 
             <!-- 4. 자격증 -->
             <section>
-                <h2 class="section-title">자격증 (Certifications)</h2>
-                <div class="card">
+                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-indigo-500">자격증 (Certifications)</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                     <ul class="list-disc list-inside space-y-2">
                         <li>
                             <span class="font-semibold">
                                 <!-- 자격증명 -->
-                                정보처리기사
+                                GTQ 2급
                             </span> - 
                             <span class="text-gray-600">
                                 <!-- 취득일 -->
-                                2023.05.20
+                                2015년 취득
                             </span>
                         </li>
                         <li>
                             <span class="font-semibold">
                                 <!-- 자격증명 -->
-                                SQL 개발자(SQLD)
+                                리눅스 마스터 2급
                             </span> - 
                             <span class="text-gray-600">
                                 <!-- 취득일 -->
-                                2022.11.19
+                                2020년 취급
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-semibold">
+                                <!-- 자격증명 -->
+                                정보처리기능사
+                            </span> - 
+                            <span class="text-gray-600">
+                                <!-- 취득일 -->
+                                2020년 취급
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-semibold">
+                                <!-- 자격증명 -->
+                                임베디드기능사 (전자계산기기능사)
+                            </span> - 
+                            <span class="text-gray-600">
+                                <!-- 취득일 -->
+                                2020년 취급
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-semibold">
+                                <!-- 자격증명 -->
+                                사물인터넷지도사
+                            </span> - 
+                            <span class="text-gray-600">
+                                <!-- 취득일 -->
+                                2021년 취급
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-semibold">
+                                <!-- 자격증명 -->
+                                코딩지도사
+                            </span> - 
+                            <span class="text-gray-600">
+                                <!-- 취득일 -->
+                                2021년 취급
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-semibold">
+                                <!-- 자격증명 -->
+                                소프트웨어교육지도사
+                            </span> - 
+                            <span class="text-gray-600">
+                                <!-- 취득일 -->
+                                2021년 취급
                             </span>
                         </li>
                     </ul>
@@ -178,7 +398,7 @@
 
             <!-- 5. 기술 레벨 -->
             <section>
-                <h2 class="section-title">기술 (Skills)</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-indigo-500">기술 (Skills)</h2>
                 <div class="card space-y-6">
                     <!-- 기술 그룹 1 -->
                     <div>
@@ -188,45 +408,149 @@
                             <div class="flex items-center">
                                 <span class="w-28 font-medium">C / C++</span>
                                 <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 70%"></div>
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 50%"></div>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">70%</span>
+                                <span class="ml-4 text-sm font-medium">50%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">JavaScript</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 35%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">35%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">Java/Kotlin</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 30%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
                             <!-- 기술 2 -->
                             <div class="flex items-center">
                                 <span class="w-28 font-medium">Python</span>
                                 <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 30%"></div>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">85%</span>
+                                <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
-                             <!-- 기술 3 -->
                             <div class="flex items-center">
-                                <span class="w-28 font-medium">JavaScript</span>
+                                <span class="w-28 font-medium">PHP</span>
                                 <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 80%"></div>
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 25%"></div>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">80%</span>
+                                <span class="ml-4 text-sm font-medium">25%</span>
                             </div>
                         </div>
                     </div>
-                     <!-- 기술 그룹 2 -->
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Frontend</h3>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Microcontrollers</h3>
                         <div class="space-y-3">
+                            <!-- 기술 1 -->
                             <div class="flex items-center">
-                                <span class="w-28 font-medium">React</span>
+                                <span class="w-28 font-medium">Atmel AVR</span>
                                 <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 75%"></div>
+                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 40%"></div>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">75%</span>
+                                <span class="ml-4 text-sm font-medium">40%</span>
+                            </div>
+                            <!-- 기술 2 -->
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">ESP</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 30%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
                             <div class="flex items-center">
-                                <span class="w-28 font-medium">Tailwind CSS</span>
+                                <span class="w-28 font-medium">STM32</span>
                                 <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 90%"></div>
+                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 25%"></div>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">90%</span>
+                                <span class="ml-4 text-sm font-medium">25%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">MCU Boards</h3>
+                        <div class="space-y-3">
+                            <!-- 기술 1 -->
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">Arduino</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">70%</span>
+                            </div>
+                            <!-- 기술 2 -->
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">RPi Pico</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 20%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">CADs</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">Fusion360</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">50%</span>
+                            </div>
+                            <!-- 기술 1 -->
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">OrCAD</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">40%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">PremierPro</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">40%</span>
+                            </div>
+                            <!-- 기술 2 -->
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">Photoshop</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">40%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">AutoCAD</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 35%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">35%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 기술 그룹 2 -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Extra</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">3D Printing</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 50%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">50%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-28 font-medium">Web Publish</span>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 40%"></div>
+                                </div>
+                                <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
                         </div>
                     </div>
@@ -235,44 +559,74 @@
             
             <!-- 6. 수상 내역 -->
             <section>
-                <h2 class="section-title">수상 내역 (Awards)</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-indigo-500">수상 내역 (Awards)</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <!-- 수상 1 -->
-                    <div class="card">
-                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <span class="text-sm font-medium text-orange-600 bg-orange-100 px-2 py-1 rounded-full">
                             <!-- 수상명 -->
-                            최우수상
+                            장려상
+                        </span>
+                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full">
+                           <!-- 수상명 -->
+                           (주)엔티렉스(디바이스마트) 대표이사
                         </span>
                         <h3 class="font-bold text-xl text-gray-800 my-2">
                             <!-- 대회 이름 -->
-                            OO대학교 SW 경진대회
+                            25' ICT 융합 프로젝트 공모전
                         </h3>
                         <p class="font-semibold text-gray-600 mb-2">
                             <!-- 작품 이름 -->
-                            실시간 주차 공간 안내 시스템
+                            착용형 모터 제어 굽은등 교정기
                         </p>
                         <p class="text-sm">
                             <!-- 작품 설명 -->
-                            IoT 센서와 웹캠을 활용하여 교내 주차장의 빈자리를 실시간으로 파악하고, 사용자에게 웹/앱으로 정보를 제공하는 서비스입니다.
+                            신체에 착용할 수 있는 전자식 굽은등 교정기입니다. 모터를 통해 생성되는 장력으로 굽은 등을 교정하며, 피드백 구조를 통해 정밀하고 균등하게 장력을 줄 수 있습니다. 어플리케이션을 통해 제어할 수 있고, 사용 기록을 통한 통계를 분석해 사용 습관에 대한 피드백도 제공합니다.
                         </p>
                     </div>
                     <!-- 수상 2 -->
-                    <div class="card">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                         <span class="text-sm font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full">
                            <!-- 수상명 -->
-                           장려상
+                           우수상
+                        </span>
+                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full">
+                           <!-- 수상명 -->
+                           광운대 소프트웨어융합대학장
                         </span>
                          <h3 class="font-bold text-xl text-gray-800 my-2">
                             <!-- 대회 이름 -->
-                            정부 주최 공공데이터 활용 공모전
+                            21' 광운대 공학설계입문 전시회
                         </h3>
                         <p class="font-semibold text-gray-600 mb-2">
                             <!-- 작품 이름 -->
-                            우리 동네 안전 지도
+                            RFID 태그 방식의 횡단보도 음향 신호기
                         </p>
                         <p class="text-sm">
                             <!-- 작품 설명 -->
-                            공공 API를 활용하여 범죄율, 가로등 위치 등의 데이터를 시각화하고, 사용자가 설정한 경로의 안전도를 점수로 알려주는 웹 서비스입니다.
+                            RFID 태그 장치가 내장된 점자블록을 통해 횡단보도 신호등에서 음향 신호를 토글할 수 있는 장치입니다. 기존의 버튼 방식의 경우 찾기가 어렵고, 누르기도 번거롭다는 점에 착안하여 개발되었으며, 총 결과물은 Arduino를 사용하여 개발된 점자블록 장치와 3D 모델링과 프린팅으로 제작된 지팡이 끝 부분에 부착되는 RFID 단말입니다.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <span class="text-sm font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full">
+                           <!-- 수상명 -->
+                           우수상
+                        </span>
+                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full">
+                           <!-- 수상명 -->
+                           융합과학교육협회이사장
+                        </span>
+                         <h3 class="font-bold text-xl text-gray-800 my-2">
+                            <!-- 대회 이름 -->
+                            19' 경기도 청소년 꿈나무 메이커톤
+                        </h3>
+                        <p class="font-semibold text-gray-600 mb-2">
+                            <!-- 작품 이름 -->
+                            주변 정보를 함께 안내하는 DID 자전거 산책로 표지판
+                        </p>
+                        <p class="text-sm">
+                            <!-- 작품 설명 -->
+                            위치 정보와 지도 API를 주변 상권과 날씨 정보, 관광지 정보를 취합하여 디스플레이에 출력해주는 DID형 자전거 표지판입니다. Arduino board를 이용하여, GLCD로 정보를 Display 했으며, Wifi 모듈을 통해 통신을 진행하도록 개발했습니다.
                         </p>
                     </div>
                 </div>
@@ -280,48 +634,188 @@
             
             <!-- 7. 참여 프로젝트 -->
             <section>
-                <h2 class="section-title">프로젝트 (Projects)</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-indigo-500">프로젝트 (Projects)</h2>
                 <div class="space-y-6">
                     <!-- 프로젝트 1 -->
-                    <div class="card">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                          <div class="flex justify-between items-center mb-2">
                             <h3 class="font-bold text-xl text-gray-800">
                                 <!-- 프로젝트 이름 -->
-                                개인 포트폴리오 사이트 제작
+                                관객 참여형 아카이빙 웹페이지
                             </h3>
                             <span class="text-sm font-medium text-gray-500">
                                 <!-- 날짜 -->
-                                2024.01 ~ 2024.02
+                                2024.07 ~ 2024.12
                             </span>
                         </div>
-                        <p class="text-indigo-600 font-semibold mb-3">
+                        <p class="text-red-600 font-semibold mb-3">
                             <!-- 참여 분야 -->
-                            Frontend, Design
+                            Web Publish, HTML, CSS, JS, PHP
                         </p>
                         <p>
                             <!-- 설명 -->
-                            자신을 소개하고 프로젝트 경험을 정리하기 위해 HTML, CSS, JavaScript를 사용하여 직접 디자인하고 개발한 개인 웹사이트입니다. 반응형 디자인을 적용하여 다양한 기기에서 최적의 화면을 제공합니다.
+                            사용자가 업로드한 사진과 작성한 글을 Database에 저장하고, 갤러리 형식으로 볼 수 있게 하는 웹 페이지 개발을 외주 받아 진행했습니다.
                         </p>
                     </div>
-                     <!-- 프로젝트 2 -->
-                    <div class="card">
+                    <!-- 프로젝트 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="font-bold text-xl text-gray-800">
                                 <!-- 프로젝트 이름 -->
-                                동아리 스터디 관리 플랫폼
+                                관객 참여형 음성인식 단어구름 생성 프로그램
                             </h3>
                             <span class="text-sm font-medium text-gray-500">
                                 <!-- 날짜 -->
-                                2023.09 ~ 2023.12
+                                2022.08 ~ 2022.11
                             </span>
                         </div>
-                        <p class="text-sky-600 font-semibold mb-3">
+                        <p class="text-red-600 font-semibold mb-3">
                             <!-- 참여 분야 -->
-                            Backend, Database
+                            Python
                         </p>
                         <p>
                             <!-- 설명 -->
-                            동아리 내 스터디 그룹의 생성, 참여, 과제 제출 및 평가를 관리하는 웹 플랫폼입니다. Node.js와 Express를 사용하여 API 서버를 구축하고, MySQL로 데이터를 관리했습니다.
+                            관객으로 부터 음성을 받아 중요 키워드를 Parsing하고, 그 키워드를 취합해 글자구름(Word cloud)를 생성하여 화면에 출력해주는 프로그램을 개발했습니다.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-xl text-gray-800">
+                                <!-- 프로젝트 이름 -->
+                                Stick Drop! (순발력 게임 장치)
+                            </h3>
+                            <span class="text-sm font-medium text-gray-500">
+                                <!-- 날짜 -->
+                                2024.07 ~ 2024.08
+                            </span>
+                        </div>
+                        <p class="text-red-600 font-semibold mb-3">
+                            <!-- 참여 분야 -->
+                            AVR, C, Fusion360, Wood work
+                        </p>
+                        <p>
+                            <!-- 설명 -->
+                            관객으로 부터 음성을 받아 중요 키워드를 Parsing하고, 그 키워드를 취합해 글자구름(Word cloud)를 생성하여 화면에 출력해주는 프로그램을 개발했습니다.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-xl text-gray-800">
+                                <!-- 프로젝트 이름 -->
+                                원격 제어 한글 전광판
+                            </h3>
+                            <span class="text-sm font-medium text-gray-500">
+                                <!-- 날짜 -->
+                                2021.08 ~ 2022.08
+                            </span>
+                        </div>
+                        <p class="text-red-600 font-semibold mb-3">
+                            <!-- 참여 분야 -->
+                            AVR, C, Androd Studio
+                        </p>
+                        <p>
+                            <!-- 설명 -->
+                            블루투스 연결을 통해 제어할 수 있는 한글 출력 전광판과 어플리케이션을 개발했습니다.
+                        </p>
+                    </div>v
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-xl text-gray-800">
+                                <!-- 프로젝트 이름 -->
+                                원격 조명 제어 단말 | 다중 단말 제어 앱
+                            </h3>
+                            <span class="text-sm font-medium text-gray-500">
+                                <!-- 날짜 -->
+                                2021.08 ~ 2022.04
+                            </span>
+                        </div>
+                        <p class="text-red-600 font-semibold mb-3">
+                            <!-- 참여 분야 -->
+                            AVR, C, App inventor
+                        </p>
+                        <p>
+                            <!-- 설명 -->
+                            여러개의 조명에 대한 단일 블루투스 단말을 개발하고, 해당 단말들을 다중으로 연결하여 제어할 수 있는 시스템을 구현했습니다.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-xl text-gray-800">
+                                <!-- 프로젝트 이름 -->
+                                음성 안내 일산화탄소 경보기
+                            </h3>
+                            <span class="text-sm font-medium text-gray-500">
+                                <!-- 날짜 -->
+                                2021.06 ~ 2021.11
+                            </span>
+                        </div>
+                        <p class="text-red-600 font-semibold mb-3">
+                            <!-- 참여 분야 -->
+                            AVR, C, OrCAD, Fusion360
+                        </p>
+                        <p>
+                            <!-- 설명 -->
+                            일산화탄소 센서를 통해 정해진 위험 정도에 따라 음성으로 경보를 출력해주는 장치를 개발했습니다.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-xl text-gray-800">
+                                <!-- 프로젝트 이름 -->
+                                원격 전압계
+                            </h3>
+                            <span class="text-sm font-medium text-gray-500">
+                                <!-- 날짜 -->
+                                2021.06 ~ 2021.10
+                            </span>
+                        </div>
+                        <p class="text-red-600 font-semibold mb-3">
+                            <!-- 참여 분야 -->
+                            AVR, C, App inventor
+                        </p>
+                        <p>
+                            <!-- 설명 -->
+                            블루투스 통신을 이용하여 장치에 연결된 배터리의 전압 값을 스마트폰으로 받아볼 수 있는 장치를 개발했습니다.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-xl text-gray-800">
+                                <!-- 프로젝트 이름 -->
+                                배터리 종지전압 보호기 'AUTO-CUT'
+                            </h3>
+                            <span class="text-sm font-medium text-gray-500">
+                                <!-- 날짜 -->
+                                2021.03 ~ 2021.12
+                            </span>
+                        </div>
+                        <p class="text-red-600 font-semibold mb-3">
+                            <!-- 참여 분야 -->
+                            AVR, C, OrCAD
+                        </p>
+                        <p>
+                            <!-- 설명 -->
+                            배터리의 종지전압 도달을 방지하기 위해 주기적으로 전압을 측정하여 릴레이를 통해 부하와의 연결을 차단하는 장치를 개발했습니다.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-xl text-gray-800">
+                                <!-- 프로젝트 이름 -->
+                                자동 배터리 절체기 (UPS)
+                            </h3>
+                            <span class="text-sm font-medium text-gray-500">
+                                <!-- 날짜 -->
+                                2021.03 ~ 2021.12
+                            </span>
+                        </div>
+                        <p class="text-red-600 font-semibold mb-3">
+                            <!-- 참여 분야 -->
+                            AVR, C, OrCAD
+                        </p>
+                        <p>
+                            <!-- 설명 -->
+                            메인 배터리의 전압을 상시 측정하여 종지 전압 밑으로 내려간 경우, SSR을 통해 보조 전원으로 전원을 Switching 하는 장치를 개발했습니다.
                         </p>
                     </div>
                 </div>
@@ -329,8 +823,9 @@
         </main>
         
         <footer class="text-center mt-12 py-6 border-t">
-            <p class="text-gray-500">© 2024. <!-- 이름 -->. All rights reserved.</p>
+            <p class="text-gray-500">© 2025. Jihoon Kim. All rights reserved.</p>
         </footer>
     </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>
