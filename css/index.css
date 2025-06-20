@@ -10,10 +10,11 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../assets/img/welding2.jpg');
+    background-color: #4A5568;
+    background-image: url('img/ppt3.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(1px) brightness(50%);
+    filter: blur(2px) brightness(40%);
     z-index: -1;
     transform: scale(1.1); 
 }
