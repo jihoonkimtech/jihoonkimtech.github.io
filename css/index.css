@@ -1,3 +1,19 @@
 body {
     font-family: 'Inter', sans-serif;
 }
+
+.text-shadow {
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 70%);
+}
+
+.with-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/img/welding2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px) brightness(50%);
+    z-index: -1;
+    transform: scale(1.1); 
+}
