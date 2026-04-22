@@ -18,3 +18,43 @@ body {
     z-index: -1;
     transform: scale(1.1); 
 }
+
+/* 3d perspective utilities */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+/* maintain 3d child elements */
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+
+/* float text above card surface */
+.translate-z-10 {
+    transform: translateZ(40px);
+}
+
+/* initial drop-in animation for the card */
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* apply drop animation on load */
+.card-drop-in {
+    animation: dropIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* zoom-in effect when entering the site */
+.card-zoom-out {
+    transform: scale(6) !important;
+    opacity: 0 !important;
+    transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.6s ease-in !important;
+    pointer-events: none;
+}

@@ -11,6 +11,57 @@
 </head>
 <body class="bg-gray-100 text-gray-700">
 
+    <div id="intro-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-95 transition-opacity duration-700 cursor-pointer overflow-hidden">
+    
+    <div class="absolute top-10 text-white/50 text-sm animate-pulse pointer-events-none">카드를 클릭하면 입장합니다.</div>
+    
+    <div id="card-container" class="perspective-1000 w-[22rem] h-[16rem] sm:w-[32rem] sm:h-[18rem]">
+        
+        <div id="business-card" class="relative w-full h-full bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl shadow-2xl p-5 sm:p-8 text-white transition-transform duration-100 ease-out preserve-3d border border-white/20 flex flex-col justify-between card-drop-in">
+            
+            <div class="flex justify-between items-start translate-z-10 gap-2 sm:gap-4">
+                
+                <div class="flex flex-col">
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-wider">Jihoon Kim</h2>
+                    
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-2 sm:mt-3">
+                        <span class="px-2.5 py-1 bg-orange-900/40 text-orange-50 text-[10px] sm:text-xs font-medium rounded-full border border-orange-300/30 shadow-sm">Embedded Systems</span>
+                        <span class="px-2.5 py-1 bg-orange-900/40 text-orange-50 text-[10px] sm:text-xs font-medium rounded-full border border-orange-300/30 shadow-sm">C / C++</span>
+                        <span class="px-2.5 py-1 bg-orange-900/40 text-orange-50 text-[10px] sm:text-xs font-medium rounded-full border border-orange-300/30 shadow-sm">RTOS</span>
+                        <span class="px-2.5 py-1 bg-orange-900/40 text-orange-50 text-[10px] sm:text-xs font-medium rounded-full border border-orange-300/30 shadow-sm">MCU</span>
+                    </div>
+                </div>
+                
+                <img src="assets/img/profile2.png" alt="profile" class="w-20 h-20 sm:w-28 sm:h-28 rounded-full border-2 border-white/50 object-cover shadow-lg shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/160/E2E8F0/4A5568';">
+            </div>
+            
+            <div class="flex justify-between items-end translate-z-10 mt-auto">
+                
+                <div class="space-y-1.5 sm:space-y-2 text-xs sm:text-base text-gray-100 mb-0.5">
+                    <div class="flex items-center space-x-2 sm:space-x-3">
+                        <i data-lucide="mail" class="w-4 h-4 sm:w-5 sm:h-5 text-orange-300"></i>
+                        <span>jihoonkimtech@gmail.com</span>
+                    </div>
+                    <div class="flex items-center space-x-2 sm:space-x-3">
+                        <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5 text-orange-300"></i>
+                        <span>010-5219-4270</span>
+                    </div>
+                </div>
+                
+                <div class="text-right border-l border-white/20 pl-3 sm:pl-6 py-1">
+                    <p class="text-white font-bold text-xs sm:text-base tracking-wide">Kwangwoon Univ.</p>
+                    <p class="text-orange-200 text-[10px] sm:text-sm mt-0.5 sm:mt-1 leading-snug">Bachelor of Science in<br> <strong>Computer Engineering</strong> </p>
+                </div>
+                
+            </div>
+            
+            <div id="card-glare" class="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-100 mix-blend-overlay" style="opacity: 0;"></div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
     <div class="container mx-auto p-4 md:p-8">
         <header class="with-bg relative overflow-hidden text-center mb-12 rounded-2xl shadow-xl py-16 sm:py-20">
             <img 
@@ -495,7 +546,7 @@
                             포스터·발표부문 우수상
                         </span>
                         <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full ml-1">
-                           광운대 교육혁신원장
+                            광운대 교육혁신원장
                         </span>
                         <h3 class="font-bold text-xl text-gray-800 my-2">
                             25' 매치업 심화과정 경진대회
