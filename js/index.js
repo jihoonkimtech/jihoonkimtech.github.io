@@ -1,6 +1,9 @@
-lucide.createIcons();
-
 document.addEventListener('DOMContentLoaded', () => {
+
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
     const overlay = document.getElementById('intro-overlay');
     const cardContainer = document.getElementById('card-container');
     const card = document.getElementById('business-card');
