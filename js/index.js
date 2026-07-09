@@ -13,6 +13,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // highlight the current section in the sticky nav while scrolling
+    const navLinks = document.querySelectorAll('.nav-link');
+    const trackedSections = document.querySelectorAll('main section[id]');
+
+    if (navLinks.length && trackedSections.length) {
+        const setActiveLink = (id) => {
+            navLinks.forEach((link) => {
+                const isActive = link.getAttribute('href') === `#${id}`;
+                link.classList.toggle('bg-orange-500', isActive);
+                link.classList.toggle('text-white', isActive);
+                link.classList.toggle('text-gray-600', !isActive);
+                link.classList.toggle('dark:text-stone-300', !isActive);
+                link.classList.toggle('hover:bg-orange-100', !isActive);
+                link.classList.toggle('dark:hover:bg-orange-900/30', !isActive);
+                link.classList.toggle('hover:text-orange-600', !isActive);
+                link.classList.toggle('dark:hover:text-orange-300', !isActive);
+                if (isActive) {
+                    link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
+            });
+        };
+
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveLink(entry.target.id);
+                    }
+                });
+            },
+            { rootMargin: '-120px 0px -60% 0px', threshold: 0 }
+        );
+
+        trackedSections.forEach((section) => sectionObserver.observe(section));
+    }
+
     const overlay = document.getElementById('intro-overlay');
     const cardContainer = document.getElementById('card-container');
     const card = document.getElementById('business-card');

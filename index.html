@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Embedded Systems and IoT projects using C/C++, RTOS, and MCU-based technologies.">
+    <meta property="og:title" content="jihoonkimtech's Portfolio">
+    <meta property="og:description" content="Embedded Systems and IoT projects using C/C++, RTOS, and MCU-based technologies.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
     <title>jihoonkimtech</title>
     <script>
         (function () {
@@ -75,17 +80,6 @@
     </div>
 </div>
 
-    <button
-        id="theme-toggle"
-        type="button"
-        aria-label="다크모드 전환"
-        title="다크모드 전환"
-        class="fixed top-4 right-4 z-40 flex items-center justify-center w-11 h-11 rounded-full bg-white/90 dark:bg-stone-800/90 backdrop-blur border border-gray-200 dark:border-stone-700 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
-    >
-        <i data-lucide="sun" class="hidden dark:block w-5 h-5 text-orange-400"></i>
-        <i data-lucide="moon" class="block dark:hidden w-5 h-5 text-gray-600"></i>
-    </button>
-
     <div class="container mx-auto p-4 md:p-8">
         <header class="with-bg relative overflow-hidden text-center mb-12 rounded-2xl shadow-xl py-16 sm:py-20">
             <img 
@@ -115,20 +109,20 @@
                 </div>
             </div>
             <div class="mt-4 flex justify-center space-x-4">
-                <a href="https://github.com/jihoonkimtech" target="_blank" class="text-orange-200 hover:text-white transition-colors">
+                <a href="https://github.com/jihoonkimtech" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-orange-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                         <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4"/>
                         <path d="M9 18c-4.51 1.2-5-2.5-7-3"/>
                     </svg>
                 </a>
-                <a href="https://instagram.com/jihoonkimtech" target="_blank" class="text-orange-200 hover:text-white transition-colors">
+                <a href="https://instagram.com/jihoonkimtech" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-orange-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                         <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                         <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                     </svg>
                 </a>
-                <a href="https://jihoonkimtech.tistory.com" target="_blank" class="text-orange-200 hover:text-white transition-colors">
+                <a href="https://jihoonkimtech.tistory.com" target="_blank" rel="noopener noreferrer" aria-label="Tistory 블로그" class="text-orange-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                         <path d="M2 6h4"/>
                         <path d="M2 10h4"/>
@@ -143,8 +137,33 @@
             </div>
         </header>
 
+        <nav aria-label="섹션 바로가기" class="sticky top-4 z-30 mb-8">
+            <div class="flex items-center gap-2 rounded-full bg-white/85 dark:bg-stone-800/85 backdrop-blur-md border border-gray-200 dark:border-stone-700 shadow-md pl-2.5 pr-2 py-2">
+                <div class="flex gap-1.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                    <a href="#education" data-nav-link class="nav-link shrink-0 px-3.5 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-stone-300 hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-600 dark:hover:text-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors">Education</a>
+                    <a href="#affiliation" data-nav-link class="nav-link shrink-0 px-3.5 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-stone-300 hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-600 dark:hover:text-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors">Affiliation</a>
+                    <a href="#teams" data-nav-link class="nav-link shrink-0 px-3.5 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-stone-300 hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-600 dark:hover:text-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors">Teams</a>
+                    <a href="#certifications" data-nav-link class="nav-link shrink-0 px-3.5 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-stone-300 hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-600 dark:hover:text-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors">Certifications</a>
+                    <a href="#skills" data-nav-link class="nav-link shrink-0 px-3.5 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-stone-300 hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-600 dark:hover:text-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors">Skills</a>
+                    <a href="#awards" data-nav-link class="nav-link shrink-0 px-3.5 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-stone-300 hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-600 dark:hover:text-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors">Awards</a>
+                    <a href="#projects" data-nav-link class="nav-link shrink-0 px-3.5 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-stone-300 hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-600 dark:hover:text-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 transition-colors">Projects</a>
+                </div>
+                <span class="w-px h-5 bg-gray-200 dark:bg-stone-700 shrink-0"></span>
+                <button
+                    id="theme-toggle"
+                    type="button"
+                    aria-label="다크모드 전환"
+                    title="다크모드 전환"
+                    class="shrink-0 flex items-center justify-center w-9 h-9 rounded-full hover:bg-orange-100 dark:hover:bg-orange-900/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 active:scale-90 transition-all"
+                >
+                    <i data-lucide="sun" class="hidden dark:block w-[18px] h-[18px] text-orange-400"></i>
+                    <i data-lucide="moon" class="block dark:hidden w-[18px] h-[18px] text-gray-600"></i>
+                </button>
+            </div>
+        </nav>
+
         <main class="space-y-12">
-            <section>
+            <section id="education" class="scroll-mt-24">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Education</h2>
                 <div class="space-y-4">
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg border border-orange-300 dark:border-orange-700/50 shadow-md hover:shadow-xl dark:shadow-none dark:hover:border-orange-500/60 transition-all duration-300">
@@ -176,7 +195,7 @@
                 </div>
             </section>
 
-            <section>
+            <section id="affiliation" class="scroll-mt-24">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Affiliation</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md border border-orange-300 dark:border-orange-700/50 hover:shadow-xl dark:shadow-none dark:hover:border-orange-500/60 transition-all duration-300">
@@ -266,7 +285,7 @@
                 </div>
             </section>
 
-            <section>
+            <section id="teams" class="scroll-mt-24">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Teams</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md border border-orange-300 dark:border-orange-700/50 hover:shadow-xl dark:shadow-none dark:hover:border-orange-500/60 transition-all duration-300">
@@ -356,7 +375,7 @@
                 </div>
             </section>
 
-            <section>
+            <section id="certifications" class="scroll-mt-24">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Certifications</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
@@ -404,183 +423,303 @@
                 </div>
             </section>
 
-            <section>
+            <section id="skills" class="scroll-mt-24">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Skills</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">Programming Languages</h3>
                         <div class="space-y-3">
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">C / C++</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 50%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">C / C++</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">능숙</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">50%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">JavaScript</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 35%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">JavaScript</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">초급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">35%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Java/Kotlin</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 30%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Java/Kotlin</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">초급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Python</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 30%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Python</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">초급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">PHP</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 25%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">PHP</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">초급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">25%</span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">Microcontrollers</h3>
                         <div class="space-y-3">
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Atmel AVR</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 40%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Atmel AVR</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">중급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">ESP</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 30%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">ESP</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">초급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">STM32</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 25%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">STM32</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-green-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">초급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">25%</span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">MCU Boards</h3>
                         <div class="space-y-3">
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Arduino</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 70%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Arduino</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-600"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">숙련</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">70%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">RPi Pico</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 20%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">RPi Pico</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">입문</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">20%</span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">Single Board Computers</h3>
                         <div class="space-y-3">
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Raspberry Pi</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-pink-600 h-2.5 rounded-full" style="width: 40%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Raspberry Pi</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-pink-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-pink-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-pink-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">중급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">CADs</h3>
                         <div class="space-y-3">
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Fusion360</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Fusion360</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">능숙</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">50%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">OrCAD</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">OrCAD</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">중급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">PremierPro</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">PremierPro</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">중급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Photoshop</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Photoshop</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">중급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">AutoCAD</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 35%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">AutoCAD</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">초급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">35%</span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">Extra</h3>
                         <div class="space-y-3">
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">3D Printing</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 50%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">3D Printing</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">능숙</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">50%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Web Publish</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 40%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Web Publish</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">중급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Android Studio</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 40%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Android Studio</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">중급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
-                            <div class="flex items-center">
-                                <span class="w-32 md:w-40 font-medium">Linux</span>
-                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
-                                    <div class="bg-sky-500 h-2.5 rounded-full" style="width: 30%"></div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium">Linux</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-gray-200 dark:bg-stone-700"></span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-500 dark:text-stone-400 w-8 text-right">초급</span>
                                 </div>
-                                <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <section>
+            <section id="awards" class="scroll-mt-24">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Awards</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
@@ -693,7 +832,7 @@
                 </div>
             </section>
             
-            <section>
+            <section id="projects" class="scroll-mt-24">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Projects</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
