@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>jihoonkimtech</title>
+    <script>
+        (function () {
+            const stored = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (stored === 'dark' || (!stored && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        };
+    </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-gray-100 text-gray-700">
+<body class="bg-gray-100 dark:bg-stone-900 text-gray-700 dark:text-stone-300 transition-colors duration-300">
 
     <div id="intro-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-95 transition-opacity duration-700 cursor-pointer overflow-hidden">
     
@@ -59,8 +74,17 @@
         </div>
     </div>
 </div>
-</div>
-</div>
+
+    <button
+        id="theme-toggle"
+        type="button"
+        aria-label="다크모드 전환"
+        title="다크모드 전환"
+        class="fixed top-4 right-4 z-40 flex items-center justify-center w-11 h-11 rounded-full bg-white/90 dark:bg-stone-800/90 backdrop-blur border border-gray-200 dark:border-stone-700 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
+    >
+        <i data-lucide="sun" class="hidden dark:block w-5 h-5 text-orange-400"></i>
+        <i data-lucide="moon" class="block dark:hidden w-5 h-5 text-gray-600"></i>
+    </button>
 
     <div class="container mx-auto p-4 md:p-8">
         <header class="with-bg relative overflow-hidden text-center mb-12 rounded-2xl shadow-xl py-16 sm:py-20">
@@ -80,7 +104,7 @@
             <div class="flex items-center space-x-2">
                     <i data-lucide="mail" class="w-5 h-5 text-orange-300"></i>
                     <span class="text-shadow">
-                        jihoonkimtech@gamil.com
+                        jihoonkimtech@gmail.com
                     </span>
                 </div>
                 <div class="flex items-center space-x-2">
@@ -121,31 +145,31 @@
 
         <main class="space-y-12">
             <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-orange-500">Education</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Education</h2>
                 <div class="space-y-4">
-                    <div class="bg-white p-6 rounded-lg border border-orange-300 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg border border-orange-300 dark:border-orange-700/50 shadow-md hover:shadow-xl dark:shadow-none dark:hover:border-orange-500/60 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 광운대학교 졸업예정
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.03 ~ 2027.02
                             </span>
                         </div>
-                        <p class="text-md text-gray-600">
+                        <p class="text-md text-gray-600 dark:text-stone-400">
                             컴퓨터정보공학부 컴퓨터공학전공
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 경민IT고등학교 졸업
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2018.03 ~ 2021.02
                             </span>
                         </div>
-                        <p class="text-md text-gray-600">
+                        <p class="text-md text-gray-600 dark:text-stone-400">
                             디지털미디어과
                         </p>
                     </div>
@@ -153,400 +177,400 @@
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-orange-500">Affiliation</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Affiliation</h2>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-orange-300 hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md border border-orange-300 dark:border-orange-700/50 hover:shadow-xl dark:shadow-none dark:hover:border-orange-500/60 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 광운대 성과관리팀
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2026.03 ~ 현재
                             </span>
                         </div>
-                        <div class="text-md text-gray-600 mt-0">
+                        <div class="text-md text-gray-600 dark:text-stone-400 mt-0">
                             행정조교
-                            <p class="text-sm my-2 text-gray-500">광운대학교 교육혁신원 성과관리팀 행정 보조</p>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">광운대학교 교육혁신원 성과관리팀 행정 보조</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-orange-300 hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md border border-orange-300 dark:border-orange-700/50 hover:shadow-xl dark:shadow-none dark:hover:border-orange-500/60 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 광운대 전자연구회 (KITEL)
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.12 ~ 현재
                             </span>
                         </div>
-                        <div class="text-md text-gray-600 mt-0">
+                        <div class="text-md text-gray-600 dark:text-stone-400 mt-0">
                             45기 정회원
-                            <p class="text-sm my-2 text-gray-500">광운대학교 중앙 학술동아리<br>22' 기술부장 | 25' AVR 세미나 강연</p>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">광운대학교 중앙 학술동아리<br>22' 기술부장 | 25' AVR 세미나 강연</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 도돌이표 플라스틱
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2020.11 ~ 2025.01
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
                             업사이클 엔지니어
-                            <p class="text-sm my-2 text-gray-500">플라스틱 분쇄/사출기 제작, 빗/블록/S고리/키링 모델링</p>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">플라스틱 분쇄/사출기 제작, 빗/블록/S고리/키링 모델링</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 의정부몽실학교
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.03 ~ 2022.12
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
                             길잡이 교사
-                            <p class="text-sm my-2 text-gray-500">공학 관련 HW/SW 프로젝트 2회, 모델링 교육 및 SW 교육 방과후 프로그램 4회 기획 및 운영</p>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">공학 관련 HW/SW 프로젝트 2회, 모델링 교육 및 SW 교육 방과후 프로그램 4회 기획 및 운영</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 의정부드림메이커
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.03 ~ 2022.08
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
                             보조강사
-                            <p class="text-sm my-2 text-gray-500">6개 청소년 팀에 대한 HW/SW 개발 교육 및 멘토링</p>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">6개 청소년 팀에 대한 HW/SW 개발 교육 및 멘토링</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 삼점일사 협동조합
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2018.03 ~ 2020.03
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
                             개발자
-                            <p class="text-sm my-2 text-gray-500">쓰레기통 결합형 DID에 탑재될 거점별 광고 플랫폼 SW 개발, Web 개발, HW 개발</p>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">쓰레기통 결합형 DID에 탑재될 거점별 광고 플랫폼 SW 개발, Web 개발, HW 개발</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-orange-500">Teams</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Teams</h2>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-orange-300  hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md border border-orange-300 dark:border-orange-700/50 hover:shadow-xl dark:shadow-none dark:hover:border-orange-500/60 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center  gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 Scout2Map
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2025.12 ~ 현재
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
-                            팀장 <span class="text-sm text-gray-600">(펌웨어 개발 | 구조 설계 | HW 설계)</span>
-                            <p class="text-sm my-2 text-gray-500">졸업작품. 다중 센서 기반 환경 적응형 정찰 UGV와 SLAM 이벤트 맵 및 관제 시스템 개발</p>
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
+                            팀장 <span class="text-sm text-gray-600 dark:text-stone-400">(펌웨어 개발 | 구조 설계 | HW 설계)</span>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">졸업작품. 다중 센서 기반 환경 적응형 정찰 UGV와 SLAM 이벤트 맵 및 관제 시스템 개발</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 낭만돌고래
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2025.06 ~ 2026.03
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
-                            팀장 <span class="text-sm text-gray-600">(펌웨어 개발 | 케이스 설계 | HW 설계)</span>
-                            <p class="text-sm my-2 text-gray-500">전국 대회 출전. 반려식물 관리를 위한 모듈형 AIoT(AI + IoT) 솔루션 GreenEye 개발</p>
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
+                            팀장 <span class="text-sm text-gray-600 dark:text-stone-400">(펌웨어 개발 | 케이스 설계 | HW 설계)</span>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">전국 대회 출전. 반려식물 관리를 위한 모듈형 AIoT(AI + IoT) 솔루션 GreenEye 개발</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 도파민
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2025.06 ~ 2026.03
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
-                            팀장 <span class="text-sm text-gray-600">(문서 작성 | 데이터 전처리 | 지표 산출)</span>
-                            <p class="text-sm my-2 text-gray-500">교내 대회 출전, 최우수/우수 수상. EEG를 통한 숏폼 컨텐츠의 위험성 분석</p>
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
+                            팀장 <span class="text-sm text-gray-600 dark:text-stone-400">(문서 작성 | 데이터 전처리 | 지표 산출)</span>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">교내 대회 출전, 최우수/우수 수상. EEG를 통한 숏폼 컨텐츠의 위험성 분석</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 DG-Protector 
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2025.01 ~ 2025.04
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
-                            팀장 <span class="text-sm text-gray-600">(펌웨어 개발 | 케이스 설계 | 앱 디자인)</span>
-                            <p class="text-sm my-2 text-gray-500">전국 대회 출전, 장려상 수상. 착용형 모터 제어 자세 교정기 개발</p>
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
+                            팀장 <span class="text-sm text-gray-600 dark:text-stone-400">(펌웨어 개발 | 케이스 설계 | 앱 디자인)</span>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">전국 대회 출전, 장려상 수상. 착용형 모터 제어 자세 교정기 개발</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 Bright
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.03 ~ 2021.06
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
-                            팀장 <span class="text-sm text-gray-600">(펌웨어 개발 | 구조물 설계 | 발표)</span>
-                            <p class="text-sm my-2 text-gray-500">교내 대회 출전, 우수상 수상. 점자블록 내장형 RFID 태그 신호등 신호알람 장치 개발</p>
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
+                            팀장 <span class="text-sm text-gray-600 dark:text-stone-400">(펌웨어 개발 | 구조물 설계 | 발표)</span>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">교내 대회 출전, 우수상 수상. 점자블록 내장형 RFID 태그 신호등 신호알람 장치 개발</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-2">
-                            <h3 class="font-bold text-lg text-gray-800">
+                            <h3 class="font-bold text-lg text-gray-800 dark:text-stone-100">
                                 Dream Keeper
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2019.06 ~ 2019.11
                             </span>
                         </div>
-                        <div class="text-md text-gray-700 mt-0">
-                            팀장 <span class="text-sm text-gray-600">(펌웨어 개발 | HW 설계 | 발표)</span>
-                            <p class="text-sm my-2 text-gray-500">도 대회 출전, 우수상 수상. 주변 정보를 함께 안내하는 DID 자전거 산책로 표지판</p>
+                        <div class="text-md text-gray-700 dark:text-stone-300 mt-0">
+                            팀장 <span class="text-sm text-gray-600 dark:text-stone-400">(펌웨어 개발 | HW 설계 | 발표)</span>
+                            <p class="text-sm my-2 text-gray-500 dark:text-stone-400">도 대회 출전, 우수상 수상. 주변 정보를 함께 안내하는 DID 자전거 산책로 표지판</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-orange-500">Certifications</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Certifications</h2>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <h3 class="font-semibold text-lg text-gray-800">GTQ 2급</h3>
-                            <span class="text-gray-600 text-sm font-medium bg-gray-200 px-3 py-1 rounded whitespace-nowrap">2015년 취득</span>
+                            <h3 class="font-semibold text-lg text-gray-800 dark:text-stone-100">GTQ 2급</h3>
+                            <span class="text-gray-600 dark:text-stone-400 text-sm font-medium bg-gray-200 dark:bg-stone-700 px-3 py-1 rounded whitespace-nowrap">2015년 취득</span>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <h3 class="font-semibold text-lg text-gray-800">리눅스 마스터 2급</h3>
-                            <span class="text-gray-600 text-sm font-medium bg-gray-200 px-3 py-1 rounded whitespace-nowrap">2020년 취득</span>
+                            <h3 class="font-semibold text-lg text-gray-800 dark:text-stone-100">리눅스 마스터 2급</h3>
+                            <span class="text-gray-600 dark:text-stone-400 text-sm font-medium bg-gray-200 dark:bg-stone-700 px-3 py-1 rounded whitespace-nowrap">2020년 취득</span>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <h3 class="font-semibold text-lg text-gray-800">정보처리기능사</h3>
-                            <span class="text-gray-600 text-sm font-medium bg-gray-200 px-3 py-1 rounded whitespace-nowrap">2020년 취득</span>
+                            <h3 class="font-semibold text-lg text-gray-800 dark:text-stone-100">정보처리기능사</h3>
+                            <span class="text-gray-600 dark:text-stone-400 text-sm font-medium bg-gray-200 dark:bg-stone-700 px-3 py-1 rounded whitespace-nowrap">2020년 취득</span>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <h3 class="font-semibold text-lg text-gray-800">임베디드기능사 (전자계산기기능사)</h3>
-                            <span class="text-gray-600 text-sm font-medium bg-gray-200 px-3 py-1 rounded whitespace-nowrap">2020년 취득</span>
+                            <h3 class="font-semibold text-lg text-gray-800 dark:text-stone-100">임베디드기능사 (전자계산기기능사)</h3>
+                            <span class="text-gray-600 dark:text-stone-400 text-sm font-medium bg-gray-200 dark:bg-stone-700 px-3 py-1 rounded whitespace-nowrap">2020년 취득</span>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <h3 class="font-semibold text-lg text-gray-800">사물인터넷지도사</h3>
-                            <span class="text-gray-600 text-sm font-medium bg-gray-200 px-3 py-1 rounded whitespace-nowrap">2021년 취득</span>
+                            <h3 class="font-semibold text-lg text-gray-800 dark:text-stone-100">사물인터넷지도사</h3>
+                            <span class="text-gray-600 dark:text-stone-400 text-sm font-medium bg-gray-200 dark:bg-stone-700 px-3 py-1 rounded whitespace-nowrap">2021년 취득</span>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <h3 class="font-semibold text-lg text-gray-800">코딩지도사</h3>
-                            <span class="text-gray-600 text-sm font-medium bg-gray-200 px-3 py-1 rounded whitespace-nowrap">2021년 취득</span>
+                            <h3 class="font-semibold text-lg text-gray-800 dark:text-stone-100">코딩지도사</h3>
+                            <span class="text-gray-600 dark:text-stone-400 text-sm font-medium bg-gray-200 dark:bg-stone-700 px-3 py-1 rounded whitespace-nowrap">2021년 취득</span>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <h3 class="font-semibold text-lg text-gray-800">소프트웨어교육지도사</h3>
-                            <span class="text-gray-600 text-sm font-medium bg-gray-200 px-3 py-1 rounded whitespace-nowrap">2021년 취득</span>
+                            <h3 class="font-semibold text-lg text-gray-800 dark:text-stone-100">소프트웨어교육지도사</h3>
+                            <span class="text-gray-600 dark:text-stone-400 text-sm font-medium bg-gray-200 dark:bg-stone-700 px-3 py-1 rounded whitespace-nowrap">2021년 취득</span>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-orange-500">Skills</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Skills</h2>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Programming Languages</h3>
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">Programming Languages</h3>
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">C / C++</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 50%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">50%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">JavaScript</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 35%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">35%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Java/Kotlin</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 30%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Python</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 30%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">PHP</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 25%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">25%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Microcontrollers</h3>
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">Microcontrollers</h3>
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Atmel AVR</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-green-600 h-2.5 rounded-full" style="width: 40%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">ESP</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-green-600 h-2.5 rounded-full" style="width: 30%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">30%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">STM32</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-green-600 h-2.5 rounded-full" style="width: 25%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">25%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">MCU Boards</h3>
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">MCU Boards</h3>
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Arduino</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 70%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">70%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">RPi Pico</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 20%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">20%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Single Board Computers</h3>
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">Single Board Computers</h3>
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Raspberry Pi</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-pink-600 h-2.5 rounded-full" style="width: 40%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">CADs</h3>
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">CADs</h3>
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Fusion360</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">50%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">OrCAD</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">PremierPro</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Photoshop</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">AutoCAD</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-blue-600 h-2.5 rounded-full" style="width: 35%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">35%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Extra</h3>
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-stone-100 mb-3">Extra</h3>
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">3D Printing</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-sky-500 h-2.5 rounded-full" style="width: 50%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">50%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Web Publish</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-sky-500 h-2.5 rounded-full" style="width: 40%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Android Studio</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-sky-500 h-2.5 rounded-full" style="width: 40%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">40%</span>
                             </div>
                             <div class="flex items-center">
                                 <span class="w-32 md:w-40 font-medium">Linux</span>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="w-full bg-gray-200 dark:bg-stone-700 rounded-full h-2.5">
                                     <div class="bg-sky-500 h-2.5 rounded-full" style="width: 30%"></div>
                                 </div>
                                 <span class="ml-4 text-sm font-medium">30%</span>
@@ -557,105 +581,112 @@
             </section>
             
             <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-orange-500">Awards</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Awards</h2>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <span class="text-sm font-medium text-yellow-600 bg-yellow-200 px-2 py-1 rounded-full ml-1">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <span class="text-sm font-medium text-yellow-600 dark:text-yellow-300 bg-yellow-200 dark:bg-yellow-900/30 px-2 py-1 rounded-full ml-1">
                             실무보고서부문 최우수상
                         </span>
-                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full ml-1">
+                        <span class="text-sm font-medium text-indigo-600 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-900/30 px-2 py-1 rounded-full ml-1">
                            한국디지털헬스산업협회장
                         </span>
-                        <h3 class="font-bold text-xl text-gray-800 my-2">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100 my-2">
                             25' 매치업 심화과정 경진대회
                         </h3>
-                        <p class="font-semibold text-gray-600 mb-1">
+                        <p class="font-semibold text-gray-600 dark:text-stone-400 mb-1">
                             EEG를 통한 숏폼 컨텐츠의 위험성 분석
                         </p>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Python, MATLAB
-                        </p>
-                        <p class="text-sm">
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Python</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">MATLAB</span>
+                        </div>
+                        <p class="text-sm leading-relaxed">
                             숏폼 컨텐츠가 뇌에 미치는 악영향을 전두엽, 후두엽 EEG 신호를 통해 게임 플레이 및 음악 청취시 EEG 신호와 비교하여 분석한 과제를 수행했습니다. 해당 과제 결과를 보고서 형식으로 작성하였습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <span class="text-sm font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full ml-1">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <span class="text-sm font-medium text-green-600 dark:text-green-300 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded-full ml-1">
                             포스터·발표부문 우수상
                         </span>
-                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full ml-1">
+                        <span class="text-sm font-medium text-indigo-600 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-900/30 px-2 py-1 rounded-full ml-1">
                             광운대 교육혁신원장
                         </span>
-                        <h3 class="font-bold text-xl text-gray-800 my-2">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100 my-2">
                             25' 매치업 심화과정 경진대회
                         </h3>
-                        <p class="font-semibold text-gray-600 mb-1">
+                        <p class="font-semibold text-gray-600 dark:text-stone-400 mb-1">
                             EEG를 통한 숏폼 컨텐츠의 위험성 분석
                         </p>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Python, MATLAB
-                        </p>
-                        <p class="text-sm">
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Python</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">MATLAB</span>
+                        </div>
+                        <p class="text-sm leading-relaxed">
                             숏폼 컨텐츠가 뇌에 미치는 악영향을 전두엽, 후두엽 EEG 신호를 통해 게임 플레이 및 음악 청취시 EEG 신호와 비교하여 분석한 과제를 수행했습니다. 해당 과제 결과 내용을 바탕으로 포스터를 만들어 부스 운영과 1분 PPT를 진행했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <span class="text-sm font-medium text-orange-600 bg-orange-100 px-2 py-1 rounded-full ml-1">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <span class="text-sm font-medium text-orange-600 dark:text-orange-300 bg-orange-100 dark:bg-orange-900/30 px-2 py-1 rounded-full ml-1">
                             장려상
                         </span>
-                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full ml-1">
+                        <span class="text-sm font-medium text-indigo-600 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-900/30 px-2 py-1 rounded-full ml-1">
                            (주)엔티렉스(디바이스마트) 대표이사
                         </span>
-                        <h3 class="font-bold text-xl text-gray-800 my-2">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100 my-2">
                             25' ICT 융합 프로젝트 공모전
                         </h3>
-                        <p class="font-semibold text-gray-600 mb-1">
+                        <p class="font-semibold text-gray-600 dark:text-stone-400 mb-1">
                             착용형 모터 제어 굽은등 교정기
                         </p>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Arduino, Fusion 360, 3D Printing
-                        </p>
-                        <p class="text-sm">
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Arduino</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Fusion 360</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">3D Printing</span>
+                        </div>
+                        <p class="text-sm leading-relaxed">
                             신체에 착용할 수 있는 전자식 굽은등 교정기입니다. 모터를 통해 생성되는 장력으로 굽은 등을 교정하며, 피드백 구조를 통해 정밀하고 균등하게 장력을 줄 수 있습니다. 어플리케이션을 통해 제어할 수 있고, 사용 기록을 통한 통계를 분석해 사용 습관에 대한 피드백도 제공합니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <span class="text-sm font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full ml-1">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <span class="text-sm font-medium text-green-600 dark:text-green-300 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded-full ml-1">
                            우수상
                         </span>
-                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full ml-1">
+                        <span class="text-sm font-medium text-indigo-600 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-900/30 px-2 py-1 rounded-full ml-1">
                            광운대 소프트웨어융합대학장
                         </span>
-                         <h3 class="font-bold text-xl text-gray-800 my-2">
+                         <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100 my-2">
                             21' 광운대 공학설계입문 전시회
                         </h3>
-                        <p class="font-semibold text-gray-600 mb-1">
+                        <p class="font-semibold text-gray-600 dark:text-stone-400 mb-1">
                             RFID 태그 방식의 횡단보도 음향 신호기
                         </p>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Arduino, Fusion 360, 3D Printing
-                        </p>
-                        <p class="text-sm">
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Arduino</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Fusion 360</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">3D Printing</span>
+                        </div>
+                        <p class="text-sm leading-relaxed">
                             RFID 태그 장치가 내장된 점자블록을 통해 횡단보도 신호등에서 음향 신호를 토글할 수 있는 장치입니다. 기존의 버튼 방식의 경우 찾기가 어렵고, 누르기도 번거롭다는 점에 착안하여 개발되었으며, 총 결과물은 Arduino를 사용하여 개발된 점자블록 장치와 3D 모델링과 프린팅으로 제작된 지팡이 끝 부분에 부착되는 RFID 단말입니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <span class="text-sm font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full ml-1">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
+                        <span class="text-sm font-medium text-green-600 dark:text-green-300 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded-full ml-1">
                            우수상
                         </span>
-                        <span class="text-sm font-medium text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full ml-1">
+                        <span class="text-sm font-medium text-indigo-600 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-900/30 px-2 py-1 rounded-full ml-1">
                            융합과학교육협회이사장
                         </span>
-                         <h3 class="font-bold text-xl text-gray-800 my-2">
+                         <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100 my-2">
                             19' 경기도 청소년 꿈나무 메이커톤
                         </h3>
-                        <p class="font-semibold text-gray-600 mb-1">
+                        <p class="font-semibold text-gray-600 dark:text-stone-400 mb-1">
                             주변 정보를 함께 안내하는 DID 자전거 산책로 표지판
                         </p>
-                        <p class="text-red-600 font-semibold mb-3">
-                            ESP32 via Arduino, JavaScript
-                        </p>
-                        <p class="text-sm">
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">ESP32 via Arduino</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">JavaScript</span>
+                        </div>
+                        <p class="text-sm leading-relaxed">
                             위치 정보와 지도 API를 주변 상권과 날씨 정보, 관광지 정보를 취합하여 디스플레이에 출력해주는 DID형 자전거 표지판입니다. Arduino board를 이용하여, GLCD로 정보를 Display 했으며, Wifi 모듈을 통해 통신을 진행하도록 개발했습니다.
                         </p>
                     </div>
@@ -663,278 +694,308 @@
             </section>
             
             <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-5 pb-2 border-b-2 border-orange-500">Projects</h2>
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-stone-100 mb-5 pb-2 border-b-2 border-orange-500">Projects</h2>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 기업 페이지 제작
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2026.01 ~ 2026.02
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Web Publish, JavaScript, DB
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Web Publish</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">JavaScript</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">DB</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             기업의 연혁 및 포트폴리오, 일정 등 다양한 정보를 소개하는 페이지 제작을 외주 받아 작업했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 관객 참여형 공유 지도 페이지
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2025.11 ~ 2025.12
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Web Publish, JavaScript, Firebase
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Web Publish</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">JavaScript</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Firebase</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             마을 속에 있는 버려진 의자를 아카이빙하는 프로젝트로, 아카이빙 된 의자를 지도에 표시하고 그 외에도 참여자가 직접 찾은 의자를 추가할 수 있도록 하는 웹 페이지 개발을 외주 받아 작업했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 관객 참여형 아카이빙 웹페이지
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2024.07 ~ 2024.12
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Web Publish, JavaScript, DB, PHP
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Web Publish</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">JavaScript</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">DB</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">PHP</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             사용자가 업로드한 사진과 작성한 글을 Database에 저장하고, 갤러리 형식으로 볼 수 있게 하는 웹 페이지 개발을 외주 받아 진행했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 관객 참여형 음성인식 단어구름 생성 프로그램
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2022.08 ~ 2022.11
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Python
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Python</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             관객으로 부터 음성을 받아 중요 키워드를 Parsing하고, 그 키워드를 취합해 글자구름(Word cloud)를 생성하여 화면에 출력해주는 프로그램을 개발했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 Stick Drop! (순발력 게임 장치)
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2024.07 ~ 2024.08
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            AVR, C, Fusion360, Wood work
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">AVR</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Fusion360</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Wood work</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             무작위로 떨어지는 막대기를 순발력으로 잡는 게임기를 개발했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 원격 제어 한글 전광판
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.08 ~ 2022.08
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            AVR, C, Androd Studio
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">AVR</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Androd Studio</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             블루투스 연결을 통해 제어할 수 있는 한글 출력 전광판과 어플리케이션을 개발했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 원격 조명 제어 단말 | 다중 단말 제어 앱
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.08 ~ 2022.04
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            AVR, C, App inventor
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">AVR</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">App inventor</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             여러개의 조명에 대한 단일 블루투스 단말을 개발하고, 해당 단말들을 다중으로 연결하여 제어할 수 있는 시스템을 구현했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 음성 안내 일산화탄소 경보기
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.06 ~ 2021.11
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            AVR, C, OrCAD, Fusion360
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">AVR</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">OrCAD</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Fusion360</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             일산화탄소 센서를 통해 정해진 위험 정도에 따라 음성으로 경보를 출력해주는 장치를 개발했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 원격 전압계
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.06 ~ 2021.10
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            AVR, C, App inventor
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">AVR</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">App inventor</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             블루투스 통신을 이용하여 장치에 연결된 배터리의 전압 값을 스마트폰으로 받아볼 수 있는 장치를 개발했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 원격 제어 영어 전광판 / 제어 앱
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.05 ~ 2021.06
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Arduino, App inventor
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Arduino</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">App inventor</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             다수의 8x8 DotMatrix가 연결된 모듈과 블루투스 모듈 HC-06을 이용하여 블루투스를 통해 원격으로 제어 가능한 영어 전광판을 개발하고 배포했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 4-Digit 전자시계 라이브러리
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.05 ~ 2021.06
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Arduino, C
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Arduino</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             4-Digit 7-Segment 모듈인 TM1637과 RTC 모듈인 DS1302를 이용하여 4자리 전자시계를 구현하는 라이브러리를 개발하고 배포했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 거점별 광고 출력 프로그램 / 관리 페이지
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.04 ~ 2021.08
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Python, JavaScript, PHP
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Python</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">JavaScript</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">PHP</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             파일 서버로부터 할당된 기기 ID와 위치 정보가 일치하는 광고 자료를 주기마다 갱신하여 슬라이드쇼 형식으로 디스플레이하는 프로그램을 개발했습니다. 추가로 그것을 위해 특정 거점을 선택하고 광고 자료를 업로드하면 정해진 정책에 따라 파일서버로 업로드할 수 있는 페이지도 개발했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 배터리 종지전압 보호기
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.03 ~ 2021.12
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            AVR, C, OrCAD
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">AVR</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">OrCAD</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             배터리의 종지전압 도달을 방지하기 위해 주기적으로 전압을 측정하여 릴레이를 통해 부하와의 연결을 차단하는 장치를 개발했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 자동 배터리 절체기
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2021.03 ~ 2021.12
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            AVR, C, OrCAD
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">AVR</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">OrCAD</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             메인 배터리의 전압을 상시 측정하여 종지 전압 밑으로 내려간 경우, SSR을 통해 보조 전원으로 전원을 Switching 하는 장치를 개발했습니다.
                         </p>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 초음파센서 라이브러리
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2020.03 ~ 2020.04
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Arduino, C
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Arduino</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             4핀 타입(TRIG, ECHO)와 3핀 타입(SIG)의 초음파 거리 센서에 대한 라이브러리를 개발해 배포했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 전압/전류 센서 라이브러리
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2020.03 ~ 2020.04
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Arduino, C
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Arduino</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">C</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             전류센서인 ACS712, 전압센서인 SZH-SSBH-043에 대한 라이브러리를 개발했습니다.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white dark:bg-stone-800 p-6 rounded-lg shadow-md hover:shadow-xl dark:shadow-none dark:border dark:border-stone-700/70 dark:hover:border-stone-600 transition-all duration-300">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-y-1">
-                            <h3 class="font-bold text-xl text-gray-800">
+                            <h3 class="font-bold text-xl text-gray-800 dark:text-stone-100">
                                 광고 DID 결합형 자동 개폐 쓰레기통
                             </h3>
-                            <span class="text-sm font-medium text-gray-500 bg-gray-200 px-2 py-1 rounded whitespace-nowrap">
+                            <span class="text-sm font-medium text-gray-500 dark:text-stone-400 bg-gray-200 dark:bg-stone-700 px-2 py-1 rounded whitespace-nowrap">
                                 2020.02 ~ 2021.04
                             </span>
                         </div>
-                        <p class="text-red-600 font-semibold mb-3">
-                            Raspberry Pi, JavaScript
-                        </p>
-                        <p>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">Raspberry Pi</span>
+                            <span class="px-2.5 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 text-xs font-semibold rounded-full border border-orange-200 dark:border-orange-800/50">JavaScript</span>
+                        </div>
+                        <p class="leading-relaxed text-[15px]">
                             초음파 센서를 통해 손을 감지하면 연결된 서보모터로 문을 개폐해주는 쓰레기통을 개발하고, 결합된 DID를 통해 웹서버로부터 다운받은 광고 자료를 슬라이드쇼로 송출하는 사이트를 개발했습니다.
                         </p>
                     </div>
@@ -942,8 +1003,8 @@
             </section>
         </main>
         
-        <footer class="text-center mt-12 py-6 border-t">
-            <p class="text-gray-500">© 2026. Jihoon Kim. All rights reserved.</p>
+        <footer class="text-center mt-12 py-6 border-t dark:border-stone-800">
+            <p class="text-gray-500 dark:text-stone-500">© 2026. Jihoon Kim. All rights reserved.</p>
         </footer>
     </div>
     <script src="./js/index.js"></script>

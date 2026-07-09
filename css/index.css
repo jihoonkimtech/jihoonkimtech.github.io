@@ -1,3 +1,11 @@
+html {
+    color-scheme: light;
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }

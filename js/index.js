@@ -4,6 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
+    // dark mode toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    }
+
     const overlay = document.getElementById('intro-overlay');
     const cardContainer = document.getElementById('card-container');
     const card = document.getElementById('business-card');
