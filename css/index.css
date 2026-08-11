@@ -55,6 +55,40 @@ html.intro-ready body {
     outline-offset: -6px;
 }
 
+/* one knob for every card thumbnail: raise the first number to get shorter cards */
+:root {
+    --thumb-ratio: 2 / 1;
+}
+
+/* the box keeps a fixed shape, the image is never cropped inside it */
+.thumb img {
+    aspect-ratio: var(--thumb-ratio);
+}
+
+/* thumbnail: fill the letterbox with a blurred copy of the same image */
+.thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--thumb-src);
+    background-size: cover;
+    background-position: center;
+    filter: blur(24px) saturate(140%);
+    transform: scale(1.25);
+    opacity: 0.45;
+    z-index: 0;
+}
+
+/* keep the backdrop subtle on dark surfaces */
+html.dark .thumb::before {
+    opacity: 0.3;
+}
+
+/* no backdrop until js resolves the source */
+.thumb:not([style*="--thumb-src"])::before {
+    display: none;
+}
+
 /* 3d perspective utilities */
 .perspective-1000 {
     perspective: 1000px;

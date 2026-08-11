@@ -90,6 +90,24 @@ document.addEventListener('DOMContentLoaded', () => {
         trackedSections.forEach((section) => sectionObserver.observe(section));
     }
 
+    // paint a blurred copy of each thumbnail behind its letterbox bars
+    document.querySelectorAll('.thumb').forEach((box) => {
+        const img = box.querySelector('img');
+        if (!img) return;
+
+        const applyBackdrop = () => {
+            const src = img.currentSrc || img.src;
+            if (src) box.style.setProperty('--thumb-src', `url("${src}")`);
+        };
+
+        // lazy images resolve later, so wait for load unless already decoded
+        if (img.complete && img.naturalWidth) {
+            applyBackdrop();
+        } else {
+            img.addEventListener('load', applyBackdrop, { once: true });
+        }
+    });
+
     const overlay = document.getElementById('intro-overlay');
     const cardContainer = document.getElementById('card-container');
     const card = document.getElementById('business-card');
