@@ -33,6 +33,28 @@ body {
     transform: scale(1.1); 
 }
 
+/* intro overlay is hidden unless scripting explicitly enables it */
+#intro-overlay {
+    display: none;
+}
+
+/* only shown once the head script confirms js is running */
+html.intro-ready #intro-overlay {
+    display: flex;
+}
+
+/* lock scroll via the same class so it can never get stuck */
+html.intro-ready,
+html.intro-ready body {
+    overflow: hidden;
+}
+
+/* keyboard focus ring for the overlay */
+#intro-overlay:focus-visible {
+    outline: 2px solid #fdba74;
+    outline-offset: -6px;
+}
+
 /* 3d perspective utilities */
 .perspective-1000 {
     perspective: 1000px;
@@ -71,4 +93,16 @@ body {
     opacity: 0 !important;
     transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.6s ease-in !important;
     pointer-events: none;
+}
+
+/* reduced-motion: keep the one-shot intro, drop only the parallax travel */
+@media (prefers-reduced-motion: reduce) {
+    @keyframes dropIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 }
