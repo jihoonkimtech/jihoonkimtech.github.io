@@ -89,6 +89,26 @@ html.dark .thumb::before {
     display: none;
 }
 
+/* flash the target card when an award links into it */
+@keyframes jumpFlash {
+    0%   { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.55); }
+    100% { box-shadow: 0 0 0 14px rgba(249, 115, 22, 0); }
+}
+
+/* ring pulses twice then settles */
+.jump-target {
+    animation: jumpFlash 1s ease-out 2;
+    border-color: #f97316 !important;
+}
+
+/* reduced motion: hold a static ring instead of pulsing */
+@media (prefers-reduced-motion: reduce) {
+    .jump-target {
+        animation: none;
+        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.5);
+    }
+}
+
 /* 3d perspective utilities */
 .perspective-1000 {
     perspective: 1000px;

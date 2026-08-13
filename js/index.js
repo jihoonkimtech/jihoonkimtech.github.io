@@ -108,6 +108,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // award cards can jump to their matching project card
+    document.querySelectorAll('a.project-jump').forEach((link) => {
+        link.addEventListener('click', () => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (!target) return;
+
+            // restart the animation even on repeat clicks
+            target.classList.remove('jump-target');
+            void target.offsetWidth;
+            target.classList.add('jump-target');
+
+            window.setTimeout(() => target.classList.remove('jump-target'), 2200);
+        });
+    });
+
     const overlay = document.getElementById('intro-overlay');
     const cardContainer = document.getElementById('card-container');
     const card = document.getElementById('business-card');
