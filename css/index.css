@@ -109,6 +109,36 @@ html.dark .thumb::before {
     }
 }
 
+/* ongoing project: soft breathing glow around the card */
+@keyframes ongoingGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    50%      { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.18); }
+}
+
+/* slow pulse so it reads as active, not as an alert */
+.ongoing-card {
+    animation: ongoingGlow 3.2s ease-in-out infinite;
+}
+
+/* small status dot next to the date */
+@keyframes liveDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.45; transform: scale(0.82); }
+}
+
+/* keeps ticking to signal work in progress */
+.live-dot {
+    animation: liveDot 1.8s ease-in-out infinite;
+}
+
+/* motion-sensitive users get the outline without the movement */
+@media (prefers-reduced-motion: reduce) {
+    .ongoing-card,
+    .live-dot {
+        animation: none;
+    }
+}
+
 /* 3d perspective utilities */
 .perspective-1000 {
     perspective: 1000px;
