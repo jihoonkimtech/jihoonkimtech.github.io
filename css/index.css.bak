@@ -25,7 +25,7 @@ body {
     position: absolute;
     inset: 0;
     background-color: #4A5568;
-    background-image: url('img/ppt3.webp');
+    background-image: url('img/ppt3.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(2px) brightness(40%);
