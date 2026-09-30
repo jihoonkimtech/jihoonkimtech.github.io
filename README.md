@@ -1,3 +1,30 @@
-# jihoonkimtech's Portfolio Site 
+# jihoonkimtech.github.io
 
-[Direct Link](https://jihoonkimtech.github.io/)
+임베디드 SW·로봇 직무 채용용 포트폴리오 사이트다. [바로 가기](https://jihoonkimtech.github.io/)
+
+## 구성
+
+| 섹션 | 내용 |
+| --- | --- |
+| 히어로 | 한 줄 소개, 프로필 스펙 시트, 핵심 수치 4개 |
+| 01 기술 | HW → 베어메탈 FW → RTOS → 임베디드 리눅스 → 로봇·엣지 AI 계층별 기술과 근거 프로젝트 |
+| 02 대표 프로젝트 | Scout2Map, Raw2Insight-Q, 임베디드 리눅스 부팅 체인, GreenEye |
+| 03 문제 해결 기록 | 증상 → 추적 → 조치 형식의 디버깅 사례 8건 |
+| 04 아카이브 | 나머지 프로젝트 22건, 분류 필터 제공 |
+| 05 수상 | 상장 원본 라이트박스 제공 |
+| 06 학력 | 평점과 직무 관련 교과 |
+| 07 활동 | 활동·경력 타임라인과 자격 |
+| 08 연락 | 이메일, GitHub, 블로그 |
+
+## 파일
+
+- `index.html` : 페이지 본문이다. 빌드 과정 없이 이 파일을 직접 고치면 된다.
+- `css/index.css` : 색상 토큰 기반 스타일이다. 라이트/다크 테마는 `:root` 토큰만 바꿔 조정한다.
+- `js/index.js` : 테마 전환, 내비 하이라이트, 아카이브 필터, 상장 라이트박스를 담당한다.
+- `assets/` : 프로젝트 썸네일, 상장 이미지, 프로필 사진이다.
+
+## 수정 방법
+
+- 아카이브 카드를 추가하려면 `index.html`의 `.archive-grid` 안에 기존 `article.a-card`를 복사해 붙인다. `data-cat` 값은 `fw`, `lib`, `sys`, `web` 중 하나이며, 필터 버튼의 숫자도 함께 고친다.
+- 다크 모드는 시스템 설정을 따르고, 우측 상단 버튼으로 바꾼 값은 브라우저에 저장된다.
+- 외부 의존성은 Pretendard(jsDelivr), JetBrains Mono(Google Fonts), Lucide 아이콘(unpkg)뿐이다.
