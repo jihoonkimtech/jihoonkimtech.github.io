@@ -2144,3 +2144,97 @@ svg.lucide {
     color: var(--muted);
     font-size: 15px;
 }
+
+/* skill rows with level meter and usage */
+@media (min-width: 1000px) {
+    .tk-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.sk-list {
+    display: grid;
+}
+
+.sk {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+.sk:first-child {
+    padding-top: 0;
+}
+
+.sk:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sk-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.sk-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.sk-lv {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.sk-lv em {
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    min-width: 2.2em;
+    text-align: right;
+}
+
+.dots {
+    display: inline-flex;
+    gap: 3px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-strong);
+}
+
+.dot.on {
+    background: var(--accent);
+}
+
+.sk-use {
+    margin-top: 3px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.lv-legend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.lv-legend .dots {
+    margin-right: -4px;
+}
+
+.lv-sep {
+    color: var(--border-strong);
+}
