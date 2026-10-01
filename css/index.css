@@ -2432,3 +2432,71 @@ svg.lucide {
 .stack-more [aria-expanded="true"] svg.i-list {
     display: none;
 }
+
+/* multicolor logos shipped as files */
+.tile-img img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.tile-img-wide {
+    width: 48px;
+}
+
+.tile-img-wide img {
+    width: 48px;
+    height: 26px;
+}
+
+/* balance the tile cards: wide board card, full-width os row */
+@media (min-width: 640px) {
+    .tk-grid-tiles .tk-full {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1000px) {
+    .tk-grid-tiles .tk-span2 {
+        grid-column: span 2;
+    }
+}
+
+/* equal tile heights even when a name wraps */
+.tile-grid {
+    grid-auto-rows: 1fr;
+}
+
+.tile {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 92px;
+}
+
+/* wordmark logos need width rather than height */
+.tile-img-wm {
+    width: 64px;
+}
+
+.tile-img-wm img {
+    width: 64px;
+    height: 24px;
+}
+
+/* black wordmarks flip to light on dark surfaces */
+:root[data-theme="dark"] .tile-img-inv img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .tile-img-inv img {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
+
+/* full-width os row stretches its tiles instead of leaving a gap */
+@media (min-width: 640px) {
+    .tk-full .tile-grid {
+        grid-template-columns: repeat(auto-fit, minmax(86px, 1fr));
+    }
+}
