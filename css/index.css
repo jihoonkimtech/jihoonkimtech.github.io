@@ -2238,3 +2238,197 @@ svg.lucide {
 .lv-sep {
     color: var(--border-strong);
 }
+
+/* icon tile view of the stack */
+@media (min-width: 1000px) {
+    .tk-grid-tiles {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.tk-grid[hidden] {
+    display: none;
+}
+
+.tile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+    gap: 8px;
+}
+
+.tile {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 6px 9px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--text);
+    font: inherit;
+    cursor: help;
+    transition: transform 0.15s, border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.tile:hover,
+.tile.is-tip {
+    transform: translateY(-2px);
+    border-color: var(--accent-line);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.tile-icon {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    color: var(--ic-l, var(--text));
+}
+
+.tile-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
+
+:root[data-theme="dark"] .tile-icon {
+    color: var(--ic-d, var(--text));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .tile-icon {
+        color: var(--ic-d, var(--text));
+    }
+}
+
+.tile-mono {
+    width: auto;
+    min-width: 30px;
+    padding: 0 5px;
+    border-radius: 7px;
+    border: 1.5px solid var(--accent-line);
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.tile-mono.mono-s {
+    font-size: 10.5px;
+}
+
+.tile-name {
+    font-size: 12.5px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.tile .dots {
+    gap: 2px;
+}
+
+.tile .dot {
+    width: 6px;
+    height: 6px;
+}
+
+/* shared floating tooltip */
+.tip {
+    position: fixed;
+    z-index: 60;
+    max-width: 260px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--text);
+    color: var(--bg);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 22%);
+    pointer-events: none;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.tip[hidden] {
+    display: none;
+}
+
+.tip::after {
+    content: '';
+    position: absolute;
+    left: var(--arrow-x, 50%);
+    width: 10px;
+    height: 10px;
+    background: inherit;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: -5px;
+}
+
+.tip.below::after {
+    bottom: auto;
+    top: -5px;
+}
+
+.tip-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 3px;
+}
+
+.tip-name {
+    font-size: 14px;
+}
+
+.tip-level {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+}
+
+.tip-use {
+    opacity: 0.85;
+}
+
+/* view toggle */
+.stack-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.stack-more .i-grid {
+    display: none;
+}
+
+.stack-more [aria-expanded="true"] .i-grid {
+    display: block;
+}
+
+.stack-more [aria-expanded="true"] .i-list {
+    display: none;
+}
+
+/* lucide replaces <i> with <svg> carrying the same class */
+.stack-more svg.i-grid {
+    display: none;
+}
+
+.stack-more [aria-expanded="true"] svg.i-grid {
+    display: block;
+}
+
+.stack-more [aria-expanded="true"] svg.i-list {
+    display: none;
+}

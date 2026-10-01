@@ -106,6 +106,85 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // stack tiles: one floating tooltip shared by every tile
+    const tip = document.getElementById('stack-tip');
+    const tiles = [...document.querySelectorAll('.tile')];
+    let tipOwner = null;
+    let shownAt = 0;
+
+    const hideTip = () => {
+        if (!tip) return;
+        tip.hidden = true;
+        if (tipOwner) tipOwner.classList.remove('is-tip');
+        tipOwner = null;
+    };
+
+    const showTip = (tile) => {
+        if (!tip) return;
+        if (tipOwner && tipOwner !== tile) tipOwner.classList.remove('is-tip');
+        tipOwner = tile;
+        tile.classList.add('is-tip');
+        tip.querySelector('.tip-name').textContent = tile.dataset.name;
+        tip.querySelector('.tip-level').textContent = tile.dataset.level;
+        tip.querySelector('.tip-use').textContent = tile.dataset.use;
+        tip.hidden = false;
+        shownAt = Date.now();
+
+        // place above the tile, flip below when there is no room, clamp to the viewport
+        const r = tile.getBoundingClientRect();
+        const w = tip.offsetWidth;
+        const h = tip.offsetHeight;
+        const margin = 8;
+        let left = r.left + r.width / 2 - w / 2;
+        left = Math.max(margin, Math.min(left, window.innerWidth - w - margin));
+        let top = r.top - h - 10;
+        const below = top < 64;
+        if (below) top = r.bottom + 10;
+        tip.classList.toggle('below', below);
+        tip.style.left = `${left}px`;
+        tip.style.top = `${top}px`;
+        tip.style.setProperty('--arrow-x', `${r.left + r.width / 2 - left}px`);
+    };
+
+    tiles.forEach((tile) => {
+        tile.addEventListener('mouseenter', () => showTip(tile));
+        tile.addEventListener('mouseleave', () => {
+            if (document.activeElement !== tile) hideTip();
+        });
+        tile.addEventListener('focus', () => showTip(tile));
+        tile.addEventListener('blur', hideTip);
+        // touch screens have no hover, so a tap toggles the tooltip
+        tile.addEventListener('click', () => {
+            // focus already opened it during this tap, so keep it open
+            if (tipOwner === tile && !tip.hidden && Date.now() - shownAt > 400) hideTip();
+            else showTip(tile);
+        });
+    });
+
+    window.addEventListener('scroll', hideTip, { passive: true });
+    window.addEventListener('resize', hideTip);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') hideTip();
+    });
+
+    // switch between icon tiles and the detailed list
+    const stackToggle = document.getElementById('stack-toggle');
+    const stackTiles = document.getElementById('stack-tiles');
+    const stackList = document.getElementById('stack-list');
+    if (stackToggle && stackTiles && stackList) {
+        stackToggle.addEventListener('click', () => {
+            const open = stackToggle.getAttribute('aria-expanded') !== 'true';
+            stackToggle.setAttribute('aria-expanded', String(open));
+            stackList.hidden = !open;
+            stackTiles.hidden = open;
+            stackToggle.querySelector('span').textContent = open ? '아이콘으로 보기' : '전체 스택 자세히 보기';
+            hideTip();
+            if (!open) {
+                document.getElementById('stack').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+            }
+        });
+    }
+
     // certificate lightbox built on the native dialog element
     const box = document.getElementById('lightbox');
     if (box && typeof box.showModal === 'function') {
