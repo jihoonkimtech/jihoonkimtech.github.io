@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // stack tiles: one floating tooltip shared by every tile
     const tip = document.getElementById('stack-tip');
-    const tiles = [...document.querySelectorAll('.tile')];
+    const tiles = [...document.querySelectorAll('.tile, .tl-pin')];
     let tipOwner = null;
     let shownAt = 0;
 
