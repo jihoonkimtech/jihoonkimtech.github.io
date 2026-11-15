@@ -16,10 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const toggle = document.getElementById('theme-toggle');
+    // announce the current theme as a pressed state
+    const syncToggle = () => toggle && toggle.setAttribute('aria-pressed', String(isDark()));
     if (toggle) {
+        syncToggle();
+        systemDark.addEventListener('change', syncToggle);
         toggle.addEventListener('click', () => {
             const next = isDark() ? 'light' : 'dark';
             root.setAttribute('data-theme', next);
+            syncToggle();
             // storage can throw in private mode, the toggle still works for this visit
             try {
                 localStorage.setItem('theme', next);

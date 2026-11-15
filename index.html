@@ -50,7 +50,7 @@
         <a class="nav-link" href="#archive">아카이브</a>
         <a class="nav-link" href="#contact">연락</a>
       </nav>
-      <button id="theme-toggle" class="icon-btn" type="button" aria-label="다크 모드 전환">
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="다크 모드" aria-pressed="false">
         <i data-lucide="moon" class="i-moon" aria-hidden="true"></i>
         <i data-lucide="sun" class="i-sun" aria-hidden="true"></i>
       </button>
@@ -78,7 +78,7 @@
 
         <aside class="spec" aria-label="프로필 요약">
           <div class="spec-photo">
-            <img src="assets/img/work.webp" alt="직접 만든 착용형 장치를 멘 김지훈" width="1400" height="1400" fetchpriority="high">
+            <img src="assets/img/work-900.webp" srcset="assets/img/work-480.webp 480w, assets/img/work-900.webp 900w" sizes="(min-width: 980px) 420px, min(420px, calc(100vw - 32px))" alt="직접 만든 착용형 장치를 멘 김지훈" width="900" height="900" fetchpriority="high">
           </div>
           <dl class="spec-sheet">
             <div><dt class="mono">NAME</dt><dd>김지훈 · Jihoon Kim</dd></div>
@@ -448,7 +448,7 @@
               </figure>
               <figure class="feature-img shot shot-wide">
                 <button class="shot-btn" type="button" data-lightbox="assets/projects/Scout2Map-관제.webp" data-alt="Scout2Map 관제 화면. SLAM 지도 위 위험 이벤트, 텔레메트리, E-Stop과 복귀 지령, 비전 이벤트 로그" aria-label="SW · React 관제 크게 보기">
-                  <img src="assets/projects/Scout2Map-관제.webp" alt="Scout2Map 관제 화면. SLAM 지도 위 위험 이벤트, 텔레메트리, E-Stop과 복귀 지령, 비전 이벤트 로그" loading="lazy" decoding="async">
+                  <img src="assets/projects/Scout2Map-관제.webp" width="1352" height="618" style="aspect-ratio: 1352 / 618" alt="Scout2Map 관제 화면. SLAM 지도 위 위험 이벤트, 텔레메트리, E-Stop과 복귀 지령, 비전 이벤트 로그" loading="lazy" decoding="async">
                 </button>
                 <figcaption class="shot-cap mono">SW · React 관제</figcaption>
               </figure>
@@ -524,7 +524,7 @@
               </figure>
               <figure class="feature-img shot shot-wide">
                 <button class="shot-btn" type="button" data-lightbox="assets/projects/Raw2Insight-Q-대시보드.webp" data-alt="Raw2Insight-Q 대시보드. 디지털 입력, AHT20 온습도, 조도 그래프와 이상 탐지 표시" aria-label="SW · 이상 탐지 대시보드 크게 보기">
-                  <img src="assets/projects/Raw2Insight-Q-대시보드.webp" alt="Raw2Insight-Q 대시보드. 디지털 입력, AHT20 온습도, 조도 그래프와 이상 탐지 표시" loading="lazy" decoding="async">
+                  <img src="assets/projects/Raw2Insight-Q-대시보드.webp" width="798" height="396" style="aspect-ratio: 798 / 396" alt="Raw2Insight-Q 대시보드. 디지털 입력, AHT20 온습도, 조도 그래프와 이상 탐지 표시" loading="lazy" decoding="async">
                 </button>
                 <figcaption class="shot-cap mono">SW · 이상 탐지 대시보드</figcaption>
               </figure>
@@ -914,7 +914,7 @@
           </li>
           </ol>
 
-          <aside class="cert-card">
+          <div class="cert-card">
             <h3 class="side-title">자격</h3>
             <ul class="certs">
               <li><b>리눅스마스터 2급</b><span>한국정보통신진흥협회 · <span class="mono">2020.07</span></span></li>
@@ -924,7 +924,7 @@
               <li><b>운전면허 2종 보통</b><span class="mono">2024.09</span></li>
             </ul>
             <p class="cert-etc">민간 자격 · GTQ 2급, 사물인터넷지도사, 코딩지도사, 소프트웨어교육지도사</p>
-          </aside>
+          </div>
         </div>
       </div>
     </section>

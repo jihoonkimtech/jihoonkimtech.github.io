@@ -6,14 +6,17 @@
     --surface-2: #faf9f7;
     --text: #1c1917;
     --text-2: #44403c;
-    --muted: #78716c;
+    --muted: #6b645e;
     --border: #e4e1dc;
     --border-strong: #d6d2cb;
     --accent: #ea580c;
-    --accent-ink: #c2410c;
+    --accent-ink: #b93d0c;
+    --accent-fill: #b93d0c;
+    --accent-fill-hover: #9a3412;
+    --on-accent: #ffffff;
     --accent-soft: #fff1e7;
     --accent-line: #fdba8c;
-    --live: #059669;
+    --live: #047857;
     --live-soft: #e6f6ef;
     --node-mcu: #fff4ec;
     --node-sbc: #eef4ff;
@@ -46,6 +49,9 @@
         --border-strong: #403c38;
         --accent: #fb923c;
         --accent-ink: #fdba74;
+        --accent-fill: #fb923c;
+        --accent-fill-hover: #fdba74;
+        --on-accent: #1c1917;
         --accent-soft: rgb(251 146 60 / 12%);
         --accent-line: rgb(251 146 60 / 45%);
         --live: #34d399;
@@ -74,6 +80,9 @@
     --border-strong: #403c38;
     --accent: #fb923c;
     --accent-ink: #fdba74;
+    --accent-fill: #fb923c;
+    --accent-fill-hover: #fdba74;
+    --on-accent: #1c1917;
     --accent-soft: rgb(251 146 60 / 12%);
     --accent-line: rgb(251 146 60 / 45%);
     --live: #34d399;
@@ -192,8 +201,8 @@ code {
     left: -999px;
     top: 8px;
     z-index: 100;
-    background: var(--accent);
-    color: #fff;
+    background: var(--accent-fill);
+    color: var(--on-accent);
     padding: 8px 14px;
     border-radius: 6px;
 }
@@ -241,8 +250,8 @@ svg.lucide {
     width: 32px;
     height: 32px;
     border-radius: 8px;
-    background: var(--accent);
-    color: #fff;
+    background: var(--accent-fill);
+    color: var(--on-accent);
     font-size: 13px;
     font-weight: 600;
 }
@@ -350,29 +359,14 @@ svg.lucide {
 }
 
 .btn-primary {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #fff;
+    background: var(--accent-fill);
+    border-color: var(--accent-fill);
+    color: var(--on-accent);
 }
 
 .btn-primary:hover {
-    background: var(--accent-ink);
-    border-color: var(--accent-ink);
-}
-
-:root[data-theme="dark"] .btn-primary {
-    color: #1c1917;
-}
-
-:root[data-theme="dark"] .btn-primary:hover {
-    color: #1c1917;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .btn-primary,
-    :root:not([data-theme="light"]) .btn-primary:hover {
-        color: #1c1917;
-    }
+    background: var(--accent-fill-hover);
+    border-color: var(--accent-fill-hover);
 }
 
 .chips {
@@ -737,6 +731,9 @@ svg.lucide {
 }
 
 .layer-proof a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
     color: var(--accent-ink);
     text-decoration: none;
     font-weight: 600;
@@ -864,8 +861,8 @@ svg.lucide {
     cursor: zoom-in;
 }
 
+/* wide screens keep their own ratio, set inline from the image size */
 .shot-wide img {
-    aspect-ratio: auto;
     object-fit: contain;
 }
 
@@ -1075,17 +1072,6 @@ svg.lucide {
     background: var(--live);
 }
 
-@keyframes liveDot {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.8); }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .live-dot {
-        animation: liveDot 1.8s ease-in-out infinite;
-    }
-}
-
 /* system diagrams */
 .flow {
     border: 1px solid var(--border);
@@ -1186,7 +1172,7 @@ svg.lucide {
 }
 
 .edge {
-    font-size: 10.5px;
+    font-size: 11.5px;
     color: var(--muted);
     white-space: nowrap;
     padding: 1px 4px;
@@ -1243,7 +1229,7 @@ svg.lucide {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    font-size: 10.5px;
+    font-size: 11.5px;
     color: var(--accent-ink);
     border-left: 1.5px dashed var(--accent-line);
     border-right: 1.5px dashed var(--accent-line);
@@ -1548,6 +1534,7 @@ svg.lucide {
 }
 
 .more summary {
+    min-height: 32px;
     cursor: pointer;
     font-size: 13px;
     font-weight: 600;
@@ -1709,7 +1696,7 @@ svg.lucide {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 6px;
+    margin-top: 2px;
     font-size: 13px;
     font-weight: 600;
     color: var(--text-2);
@@ -1725,12 +1712,17 @@ svg.lucide {
     margin-right: 14px;
 }
 
+.award-work,
+.award-cert {
+    min-height: 32px;
+}
+
 /* certificate button sits beside the related project link */
 .award-cert {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 6px;
+    margin-top: 2px;
     padding: 0;
     border: 0;
     background: none;
@@ -2036,6 +2028,7 @@ svg.lucide {
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    min-height: 32px;
     text-decoration: none;
 }
 
@@ -2506,8 +2499,8 @@ svg.lucide {
     font-weight: 700;
     padding: 1px 7px;
     border-radius: 999px;
-    background: var(--accent);
-    color: #fff;
+    background: var(--accent-fill);
+    color: var(--on-accent);
 }
 
 .tip-use {
@@ -2645,7 +2638,7 @@ svg.lucide {
     --tl-edu: #2563eb;
     --tl-mil: #0891b2;
     --tl-cert: #7c3aed;
-    --tl-award: #ea580c;
+    --tl-award: var(--accent-fill);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2837,11 +2830,11 @@ svg.lucide {
 
 .tl-pill.tl-hi {
     background: var(--c);
-    color: #fff;
+    color: var(--on-accent);
 }
 
 .tl-pill.tl-hi svg {
-    color: #fff;
+    color: var(--on-accent);
 }
 
 .tl-pin:hover,
