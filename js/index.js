@@ -185,12 +185,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // certificate lightbox built on the native dialog element
+    // award photo and certificate lightbox built on the native dialog element
     const box = document.getElementById('lightbox');
     if (box && typeof box.showModal === 'function') {
         const img = box.querySelector('img');
         document.querySelectorAll('[data-lightbox]').forEach((btn) => {
             btn.addEventListener('click', () => {
+                // describe certificates by name and treat photos as decorative
+                img.alt = btn.dataset.alt || '';
                 img.src = btn.dataset.lightbox;
                 box.showModal();
             });

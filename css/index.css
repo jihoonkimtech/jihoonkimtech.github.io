@@ -841,6 +841,69 @@ svg.lucide {
     height: auto;
 }
 
+/* hardware photo and software screen shown together */
+.shots {
+    display: grid;
+    gap: 10px;
+}
+
+.shots-pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.shot {
+    position: relative;
+}
+
+.shot-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+}
+
+.shot-wide img {
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+.shots-pair .shot img {
+    aspect-ratio: 4 / 5;
+    object-position: 50% 0;
+}
+
+/* keep the subject when it sits near the bottom of a tall photo */
+.shots-pair .shot-low img {
+    object-position: 50% 100%;
+}
+
+.shot-cap {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgb(28 25 23 / 72%);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    pointer-events: none;
+}
+
+.a-thumb-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--border);
+}
+
+.a-thumb.a-thumb-pair img {
+    aspect-ratio: 8 / 9;
+}
+
 .feature-meta {
     display: flex;
     flex-wrap: wrap;
@@ -1049,6 +1112,11 @@ svg.lucide {
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
     gap: 6px;
+}
+
+/* two nodes with one edge between them */
+.flow-row-2 {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
 }
 
 .flow-row-center {
@@ -1519,19 +1587,21 @@ svg.lucide {
     padding: 4px 10px;
 }
 
-/* awards */
+/* awards: equal cards so every prize reads at the same weight */
 .awards {
     display: grid;
     gap: 12px;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 640px) {
     .awards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
 
-    .award-top {
-        grid-column: 1 / -1;
+@media (min-width: 1000px) {
+    .awards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
@@ -1546,20 +1616,32 @@ svg.lucide {
     padding: 14px;
 }
 
-.award-top {
-    border-color: var(--accent-line);
-    background: linear-gradient(120deg, var(--accent-soft), var(--surface) 60%);
+/* stack photo over text once there is room for columns */
+@media (min-width: 640px) {
+    .award {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto 1fr;
+        gap: 0;
+        align-items: start;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .award .award-thumb {
+        aspect-ratio: 16 / 10;
+        border: 0;
+        border-bottom: 1px solid var(--border);
+        border-radius: 0;
+    }
+
+    .award-body {
+        padding: 14px 16px 16px;
+    }
 }
 
-@media (min-width: 760px) {
-    .award-top {
-        grid-template-columns: 150px minmax(0, 1fr);
-        padding: 18px;
-    }
-
-    .award-top .award-contest {
-        font-size: 20px;
-    }
+/* the grand prize keeps only a thin accent edge and a gold label */
+.award-top {
+    border-color: var(--accent-line);
 }
 
 .award-thumb {
@@ -1578,6 +1660,13 @@ svg.lucide {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) {
+    .award-thumb:hover img {
+        transform: scale(1.03);
+    }
 }
 
 .award-thumb .zoom {
@@ -1601,7 +1690,6 @@ svg.lucide {
 }
 
 .award-top .award-prize {
-    font-size: 15px;
     color: var(--gold);
 }
 
@@ -1629,6 +1717,31 @@ svg.lucide {
 }
 
 .award-work:hover {
+    color: var(--accent-ink);
+}
+
+/* leave room before the certificate button even when it wraps */
+.award-work {
+    margin-right: 14px;
+}
+
+/* certificate button sits beside the related project link */
+.award-cert {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: zoom-in;
+}
+
+.award-cert:hover {
     color: var(--accent-ink);
 }
 
@@ -1935,7 +2048,7 @@ svg.lucide {
     border: 0;
     padding: 0;
     background: transparent;
-    max-width: min(92vw, 900px);
+    max-width: min(94vw, 1280px);
     max-height: 92vh;
     overflow: visible;
 }

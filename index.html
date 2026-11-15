@@ -42,12 +42,12 @@
       </a>
       <nav class="nav" aria-label="섹션">
         <a class="nav-link" href="#stack">기술 스택</a>
+        <a class="nav-link" href="#education">학력</a>
+        <a class="nav-link" href="#awards">수상</a>
         <a class="nav-link" href="#featured">프로젝트</a>
         <a class="nav-link" href="#debug">문제 해결</a>
-        <a class="nav-link" href="#archive">아카이브</a>
-        <a class="nav-link" href="#awards">수상</a>
-        <a class="nav-link" href="#education">학력</a>
         <a class="nav-link" href="#experience">활동</a>
+        <a class="nav-link" href="#archive">아카이브</a>
         <a class="nav-link" href="#contact">연락</a>
       </nav>
       <button id="theme-toggle" class="icon-btn" type="button" aria-label="다크 모드 전환">
@@ -220,7 +220,7 @@
               </div>
             </div>
             <ul class="chips layer-skills"><li class="chip">crosstool-ng</li><li class="chip">TF-A</li><li class="chip">U-Boot</li><li class="chip">Linux Kernel</li><li class="chip">BusyBox</li><li class="chip">Yocto / bitbake</li><li class="chip">Kernel Module</li><li class="chip">System Call</li></ul>
-            <div class="layer-proof"><span class="mono">근거</span><a href="#f-emblinux">STM32MP157 부팅 체인</a><a href="#proj-wordcloud">Yocto 이미지 외주</a></div>
+            <div class="layer-proof"><span class="mono">근거</span><a href="#f-emblinux">STM32MP157 부팅 체인</a><a href="#f-wordcloud">Yocto 이미지 외주</a></div>
           </div>
           <div class="layer">
             <div class="layer-head">
@@ -259,21 +259,200 @@
       </div>
     </section>
 
+    <!-- education -->
+    <section id="education" class="section section-alt">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-kicker mono">02 · EDUCATION</p>
+          <h2 class="sec-title">학력과 관련 교과</h2>
+        </header>
+
+        <div class="edu-grid">
+          <div class="edu-card">
+            <p class="mono edu-period">2021.03 ~ 2027.02</p>
+            <h3 class="edu-school">광운대학교 <span class="pill">졸업예정</span></h3>
+            <p class="edu-major">컴퓨터정보공학부 컴퓨터공학전공</p>
+            <dl class="edu-gpa">
+              <div><dt>전공 평점</dt><dd class="mono">3.72 <small>/ 4.5</small></dd></div>
+              <div><dt>전체 평점</dt><dd class="mono">3.63 <small>/ 4.5</small></dd></div>
+              <div><dt>이수 학점</dt><dd class="mono">124</dd></div>
+            </dl>
+          </div>
+          <div class="edu-card">
+            <p class="mono edu-period">2018.03 ~ 2021.02</p>
+            <h3 class="edu-school">경민IT고등학교</h3>
+            <p class="edu-major">디지털미디어과</p>
+            <p class="edu-note">중학교 동아리에서 MCU 보드로 임베디드를 처음 접하고 특성화고를 택했습니다. 리눅스마스터를 준비하며 Raspberry Pi로 OS와 커널, 드라이버에 관심이 생겨 컴퓨터공학으로 진학했습니다.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="courses">
+            <caption class="sr-only">직무 관련 교과목</caption>
+            <thead><tr><th scope="col">교과목</th><th scope="col">학기</th><th scope="col">성적</th><th scope="col">다룬 내용</th></tr></thead>
+            <tbody><tr><th scope="row">임베디드시스템S/W설계</th><td class="mono">2026-1</td><td><span class="grade grade-top">A+</span></td><td>STM32MP157에 툴체인·TF-A·U-Boot·커널·rootfs를 쌓아 부팅, FreeRTOS 큐에 긴급 메시지 API 추가</td></tr><tr><th scope="row">산학협력캡스톤설계</th><td class="mono">2026-1</td><td><span class="grade grade-top">A+</span></td><td>Scout2Map 주행 제어·센서 퓨전 펌웨어와 ROS 2 통합</td></tr><tr><th scope="row">시스템프로그래밍 / 실습</th><td class="mono">2025-1</td><td><span class="grade">A0 / A+</span></td><td>HTTP 프록시 서버를 단계적으로 구현: SHA1 캐시, 연결당 자식 프로세스, 시그널 타임아웃, pthread 로깅과 세마포어</td></tr><tr><th scope="row">운영체제 / 실습</th><td class="mono">2025-2</td><td><span class="grade">B+ / A0</span></td><td>시스템 콜 추가와 커널 재빌드, 시스템 콜 테이블 후킹 모듈, task_struct·fork 경로 추적, 스케줄러 구현 비교</td></tr><tr><th scope="row">GPU컴퓨팅</th><td class="mono">2026-1</td><td><span class="grade">B+</span></td><td>OpenMP 스케줄링 비교, CUDA 행렬 곱 Global·Shared Memory 타일링과 CPU 결과 자동 교차 검증</td></tr><tr><th scope="row">마이크로프로세서</th><td class="mono">2026-2</td><td><span class="grade">수강 중</span></td><td>Jetson Nano·Raspberry Pi·ZYNQ 실습: ARM 어셈블리·C 연동, 카메라 제어, TensorRT 추론, Zynq HW/SW 설계</td></tr><tr><th scope="row">디지털신호처리</th><td class="mono">2025-2</td><td><span class="grade">B+</span></td><td>MATLAB 디지털 필터 설계</td></tr></tbody>
+          </table>
+        </div>
+        <p class="course-note">그 밖의 전공 기초 · 어셈블리프로그램설계및실습 <b>A+</b>, 데이터구조설계 <b>A0</b> / 실습 <b>A+</b>, 전자회로 <b>A0</b>, 컴퓨터네트워크 <b>B+</b>, 컴퓨터구조 <b>B0</b></p>
+      </div>
+    </section>
+
+    <!-- awards -->
+    <section id="awards" class="section">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-kicker mono">03 · AWARDS</p>
+          <h2 class="sec-title">수상</h2>
+          <p class="sec-sub">사진을 누르면 현장을, ‘상장 보기’를 누르면 상장 원본을 크게 볼 수 있습니다.</p>
+        </header>
+        <ul class="awards">
+          <li class="award award-top">
+            <button class="award-thumb" type="button" data-lightbox="assets/awards/26-아두이노-메이커-공모전.webp" aria-label="26&#x27; 아두이노 메이커 공모전 사진 크게 보기">
+              <img src="assets/awards/26-아두이노-메이커-공모전.webp" alt="" loading="lazy" decoding="async">
+              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
+            </button>
+            <div class="award-body">
+              <p class="award-prize">대상</p>
+              <h3 class="award-contest">26&#x27; 아두이노 메이커 공모전</h3>
+              <p class="award-org">㈜엔티렉스(디바이스마트) 대표이사 <span class="mono">· 2026.09.04</span></p>
+              <a class="award-work" href="#f-raw2insight"><i data-lucide="corner-down-right" aria-hidden="true"></i>Raw2Insight-Q</a>
+              <button class="award-cert" type="button" data-lightbox="assets/awards/26-아두이노-메이커-공모전-상장.webp" data-alt="26&#x27; 아두이노 메이커 공모전 대상 상장" aria-label="26&#x27; 아두이노 메이커 공모전 대상 상장 보기"><i data-lucide="award" aria-hidden="true"></i>상장 보기</button>
+            </div>
+          </li>
+          <li class="award award-high">
+            <button class="award-thumb" type="button" data-lightbox="assets/awards/26-졸업작품전시회-현장.webp" aria-label="2026학년도 컴퓨터정보공학부 졸업작품전시회 사진 크게 보기">
+              <img src="assets/awards/26-졸업작품전시회-현장.webp" alt="" loading="lazy" decoding="async">
+              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
+            </button>
+            <div class="award-body">
+              <p class="award-prize">최우수상</p>
+              <h3 class="award-contest">2026학년도 컴퓨터정보공학부 졸업작품전시회</h3>
+              <p class="award-org">광운대학교 인공지능융합대학장 <span class="mono">· 2026.11.12</span></p>
+              <a class="award-work" href="#f-scout2map"><i data-lucide="corner-down-right" aria-hidden="true"></i>Scout2Map</a>
+              <button class="award-cert" type="button" data-lightbox="assets/awards/26-졸업작품전시회-상장.webp" data-alt="2026학년도 컴퓨터정보공학부 졸업작품전시회 최우수상 상장" aria-label="2026학년도 컴퓨터정보공학부 졸업작품전시회 최우수상 상장 보기"><i data-lucide="award" aria-hidden="true"></i>상장 보기</button>
+            </div>
+          </li>
+          <li class="award award-high">
+            <button class="award-thumb" type="button" data-lightbox="assets/awards/26-산학연계-AI-프로젝트-현장.webp" aria-label="제1회 산학연계 AI 프로젝트 전시회 사진 크게 보기">
+              <img src="assets/awards/26-산학연계-AI-프로젝트-현장.webp" alt="" loading="lazy" decoding="async">
+              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
+            </button>
+            <div class="award-body">
+              <p class="award-prize">최우수상</p>
+              <h3 class="award-contest">제1회 산학연계 AI 프로젝트 전시회</h3>
+              <p class="award-org">광운대학교 총장 <span class="mono">· 2026.11.12</span></p>
+              <a class="award-work" href="#f-scout2map"><i data-lucide="corner-down-right" aria-hidden="true"></i>Scout2Map</a>
+              <button class="award-cert" type="button" data-lightbox="assets/awards/26-산학연계-AI-프로젝트-상장.webp" data-alt="제1회 산학연계 AI 프로젝트 전시회 최우수상 상장" aria-label="제1회 산학연계 AI 프로젝트 전시회 최우수상 상장 보기"><i data-lucide="award" aria-hidden="true"></i>상장 보기</button>
+            </div>
+          </li>
+          <li class="award award-high">
+            <button class="award-thumb" type="button" data-lightbox="assets/awards/25-매치업-심화과정-경진대회-실무보고서.webp" aria-label="제4회 매치업 심화과정 경진대회 사진 크게 보기">
+              <img src="assets/awards/25-매치업-심화과정-경진대회-실무보고서.webp" alt="" loading="lazy" decoding="async">
+              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
+            </button>
+            <div class="award-body">
+              <p class="award-prize">최우수상 · 실무보고서부문</p>
+              <h3 class="award-contest">제4회 매치업 심화과정 경진대회</h3>
+              <p class="award-org">한국디지털헬스산업협회장 <span class="mono">· 2025.12.05</span></p>
+              <a class="award-work" href="#proj-eeg"><i data-lucide="corner-down-right" aria-hidden="true"></i>EEG 숏폼 영향 분석</a>
+              <button class="award-cert" type="button" data-lightbox="assets/awards/25-매치업-심화과정-경진대회-실무보고서-상장.webp" data-alt="제4회 매치업 심화과정 경진대회 최우수상 상장" aria-label="제4회 매치업 심화과정 경진대회 최우수상 상장 보기"><i data-lucide="award" aria-hidden="true"></i>상장 보기</button>
+            </div>
+          </li>
+          <li class="award award-mid">
+            <button class="award-thumb" type="button" data-lightbox="assets/awards/25-매치업-심화과정-경진대회-포스터.webp" aria-label="제4회 매치업 심화과정 경진대회 사진 크게 보기">
+              <img src="assets/awards/25-매치업-심화과정-경진대회-포스터.webp" alt="" loading="lazy" decoding="async">
+              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
+            </button>
+            <div class="award-body">
+              <p class="award-prize">우수상 · 포스터부문</p>
+              <h3 class="award-contest">제4회 매치업 심화과정 경진대회</h3>
+              <p class="award-org">광운대학교 교육혁신원장 <span class="mono">· 2025.12.05</span></p>
+              <a class="award-work" href="#proj-eeg"><i data-lucide="corner-down-right" aria-hidden="true"></i>EEG 숏폼 영향 분석</a>
+              <button class="award-cert" type="button" data-lightbox="assets/awards/25-매치업-심화과정-경진대회-포스터-상장.webp" data-alt="제4회 매치업 심화과정 경진대회 우수상 상장" aria-label="제4회 매치업 심화과정 경진대회 우수상 상장 보기"><i data-lucide="award" aria-hidden="true"></i>상장 보기</button>
+            </div>
+          </li>
+          <li class="award award-mid">
+            <button class="award-thumb" type="button" data-lightbox="assets/awards/25-ICT-융합-프로젝트-공모전.webp" aria-label="25&#x27; ICT 융합 프로젝트 공모전 사진 크게 보기">
+              <img src="assets/awards/25-ICT-융합-프로젝트-공모전.webp" alt="" loading="lazy" decoding="async">
+              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
+            </button>
+            <div class="award-body">
+              <p class="award-prize">장려상</p>
+              <h3 class="award-contest">25&#x27; ICT 융합 프로젝트 공모전</h3>
+              <p class="award-org">㈜엔티렉스(디바이스마트) 대표이사 <span class="mono">· 2025.07.22</span></p>
+              <a class="award-work" href="#proj-dgprotector"><i data-lucide="corner-down-right" aria-hidden="true"></i>DG-Protector</a>
+              <button class="award-cert" type="button" data-lightbox="assets/awards/25-ICT-융합-프로젝트-공모전-상장.webp" data-alt="25&#x27; ICT 융합 프로젝트 공모전 장려상 상장" aria-label="25&#x27; ICT 융합 프로젝트 공모전 장려상 상장 보기"><i data-lucide="award" aria-hidden="true"></i>상장 보기</button>
+            </div>
+          </li>
+          <li class="award award-mid">
+            <button class="award-thumb" type="button" data-lightbox="assets/awards/22-몽실학교-수업-현장.webp" aria-label="몽실학교 교육활동 활성화 유공 사진 크게 보기">
+              <img src="assets/awards/22-몽실학교-수업-현장.webp" alt="" loading="lazy" decoding="async">
+              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
+            </button>
+            <div class="award-body">
+              <p class="award-prize">표창</p>
+              <h3 class="award-contest">몽실학교 교육활동 활성화 유공</h3>
+              <p class="award-org">경기도교육감 <span class="mono">· 2022.12.31</span></p>
+              <a class="award-work" href="#exp-mongsil"><i data-lucide="corner-down-right" aria-hidden="true"></i>청소년 주도 메이커 프로젝트 2년 운영</a>
+              <button class="award-cert" type="button" data-lightbox="assets/awards/22-몽실학교-표창장.webp" data-alt="몽실학교 교육활동 활성화 유공 표창장" aria-label="몽실학교 교육활동 활성화 유공 표창장 보기"><i data-lucide="award" aria-hidden="true"></i>표창장 보기</button>
+            </div>
+          </li>
+          <li class="award award-mid">
+            <button class="award-thumb" type="button" data-lightbox="assets/awards/21-광운대-공학설계입문-전시회.webp" aria-label="공학설계입문 작품전시회 사진 크게 보기">
+              <img src="assets/awards/21-광운대-공학설계입문-전시회.webp" alt="" loading="lazy" decoding="async">
+              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
+            </button>
+            <div class="award-body">
+              <p class="award-prize">우수상</p>
+              <h3 class="award-contest">공학설계입문 작품전시회</h3>
+              <p class="award-org">광운대학교 소프트웨어융합대학장 <span class="mono">· 2021.06.21</span></p>
+              <a class="award-work" href="#proj-braille"><i data-lucide="corner-down-right" aria-hidden="true"></i>RFID 횡단보도 음향 신호기</a>
+              <button class="award-cert" type="button" data-lightbox="assets/awards/21-공학설계입문-상장.webp" data-alt="공학설계입문 작품전시회 우수상 상장" aria-label="공학설계입문 작품전시회 우수상 상장 보기"><i data-lucide="award" aria-hidden="true"></i>상장 보기</button>
+            </div>
+          </li>
+          <li class="award award-mid">
+            <button class="award-thumb" type="button" data-lightbox="assets/awards/19-경기도-청소년-꿈나무-메이커톤.webp" aria-label="경기도 청소년 꿈나무 메이커톤 사진 크게 보기">
+              <img src="assets/awards/19-경기도-청소년-꿈나무-메이커톤.webp" alt="" loading="lazy" decoding="async">
+              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
+            </button>
+            <div class="award-body">
+              <p class="award-prize">우수상</p>
+              <h3 class="award-contest">경기도 청소년 꿈나무 메이커톤</h3>
+              <p class="award-org">융합과학교육협회 이사장 <span class="mono">· 2019.12.29</span></p>
+              <a class="award-work" href="#proj-did-sign"><i data-lucide="corner-down-right" aria-hidden="true"></i>DID형 자전거 산책로 표지판</a>
+              <button class="award-cert" type="button" data-lightbox="assets/awards/19-경기도-청소년-메이커톤-상장.webp" data-alt="경기도 청소년 꿈나무 메이커톤 우수상 상장" aria-label="경기도 청소년 꿈나무 메이커톤 우수상 상장 보기"><i data-lucide="award" aria-hidden="true"></i>상장 보기</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- featured projects -->
     <section id="featured" class="section section-alt">
       <div class="wrap">
         <header class="sec-head">
-          <p class="sec-kicker mono">02 · FEATURED</p>
+          <p class="sec-kicker mono">04 · FEATURED</p>
           <h2 class="sec-title">대표 프로젝트</h2>
-          <p class="sec-sub">직무와 가장 가까운 네 가지입니다. 팀 프로젝트는 시스템 전체와 제가 맡은 부분을 나눠 적었습니다.</p>
+          <p class="sec-sub">직무와 가장 가까운 다섯 가지입니다. 팀 프로젝트는 시스템 전체와 제가 맡은 부분을 나눠 적었습니다.</p>
         </header>
 
         <!-- scout2map -->
         <article id="f-scout2map" class="feature">
           <div class="feature-visual">
-            <figure class="feature-img">
-              <img src="assets/projects/Scout2Map_UGV.webp" alt="Scout2Map UGV 실물. STM32와 RP2350 보드, LiDAR가 올라간 4륜 차체" loading="lazy" decoding="async">
-            </figure>
+            <div class="shots">
+              <figure class="feature-img shot">
+                <button class="shot-btn" type="button" data-lightbox="assets/projects/Scout2Map_UGV.webp" data-alt="Scout2Map UGV 실물. STM32와 RP2350 보드, LiDAR가 올라간 4륜 차체" aria-label="HW · UGV 실물 크게 보기">
+                  <img src="assets/projects/Scout2Map_UGV.webp" alt="Scout2Map UGV 실물. STM32와 RP2350 보드, LiDAR가 올라간 4륜 차체" loading="lazy" decoding="async">
+                </button>
+                <figcaption class="shot-cap mono">HW · UGV 실물</figcaption>
+              </figure>
+              <figure class="feature-img shot shot-wide">
+                <button class="shot-btn" type="button" data-lightbox="assets/projects/Scout2Map-관제.webp" data-alt="Scout2Map 관제 화면. SLAM 지도 위 위험 이벤트, 텔레메트리, E-Stop과 복귀 지령, 비전 이벤트 로그" aria-label="SW · React 관제 크게 보기">
+                  <img src="assets/projects/Scout2Map-관제.webp" alt="Scout2Map 관제 화면. SLAM 지도 위 위험 이벤트, 텔레메트리, E-Stop과 복귀 지령, 비전 이벤트 로그" loading="lazy" decoding="async">
+                </button>
+                <figcaption class="shot-cap mono">SW · React 관제</figcaption>
+              </figure>
+            </div>
             <div class="flow" aria-label="Scout2Map 시스템 구성">
               <p class="flow-title mono">SYSTEM</p>
               <div class="flow-row">
@@ -292,7 +471,7 @@
 
           <div class="feature-body">
             <div class="feature-meta">
-              <span class="status status-live"><span class="live-dot" aria-hidden="true"></span>진행 중</span>
+              <span class="status status-live"><span class="live-dot" aria-hidden="true"></span>마무리 중</span>
               <span class="mono">2025.10 ~</span>
               <span>팀장</span>
             </div>
@@ -322,7 +501,7 @@
               <div><dt class="mono">Fallback</dt><dd>엔코더 유실 시 개루프로 전환해 임무 지속</dd></div>
             </dl>
 
-            <p class="now"><i data-lucide="loader" aria-hidden="true"></i><span><b>지금 하는 일</b> LiDAR 사각지대를 VL53L0X ToF 센서 2개로 보완해 Nav2 충돌 감시 계층에 반영하고 있습니다.</span></p>
+            <p class="now"><i data-lucide="loader" aria-hidden="true"></i><span><b>지금 하는 일</b> SW 저작권 등록을 진행하고 있습니다. 직전에는 LiDAR 사각지대를 VL53L0X ToF 센서 2개로 보완해 Nav2 충돌 감시 계층에 반영했습니다.</span></p>
 
             <ul class="chips">
               <li class="chip">STM32</li><li class="chip">CMSIS</li><li class="chip">RP2350</li><li class="chip">C</li><li class="chip">ROS 2</li><li class="chip">Nav2</li><li class="chip">SLAM</li><li class="chip">rosbridge</li><li class="chip">React</li>
@@ -336,9 +515,20 @@
         <!-- raw2insight -->
         <article id="f-raw2insight" class="feature feature-flip">
           <div class="feature-visual">
-            <figure class="feature-img">
-              <img src="assets/projects/Raw2Insight-Q.webp" alt="Raw2Insight-Q 실물. 단자대 케이스에 I2C 센서와 SSR 두 개를 연결한 모습" loading="lazy" decoding="async">
-            </figure>
+            <div class="shots">
+              <figure class="feature-img shot">
+                <button class="shot-btn" type="button" data-lightbox="assets/projects/Raw2Insight-Q.webp" data-alt="Raw2Insight-Q 실물. 단자대 케이스에 I2C 센서와 SSR 두 개를 연결한 모습" aria-label="HW · 단말 실물 크게 보기">
+                  <img src="assets/projects/Raw2Insight-Q.webp" alt="Raw2Insight-Q 실물. 단자대 케이스에 I2C 센서와 SSR 두 개를 연결한 모습" loading="lazy" decoding="async">
+                </button>
+                <figcaption class="shot-cap mono">HW · 단말 실물</figcaption>
+              </figure>
+              <figure class="feature-img shot shot-wide">
+                <button class="shot-btn" type="button" data-lightbox="assets/projects/Raw2Insight-Q-대시보드.webp" data-alt="Raw2Insight-Q 대시보드. 디지털 입력, AHT20 온습도, 조도 그래프와 이상 탐지 표시" aria-label="SW · 이상 탐지 대시보드 크게 보기">
+                  <img src="assets/projects/Raw2Insight-Q-대시보드.webp" alt="Raw2Insight-Q 대시보드. 디지털 입력, AHT20 온습도, 조도 그래프와 이상 탐지 표시" loading="lazy" decoding="async">
+                </button>
+                <figcaption class="shot-cap mono">SW · 이상 탐지 대시보드</figcaption>
+              </figure>
+            </div>
             <div class="flow flow-tall" aria-label="Raw2Insight-Q 구조">
               <p class="flow-title mono">ARDUINO UNO Q · ONE BOARD</p>
               <div class="split">
@@ -433,7 +623,7 @@
               <li>cscope로 <code>task_struct</code>와 fork 경로를 따라가 필드를 추가하고, RCU 읽기 락으로 자식 프로세스 목록 순회</li>
             </ul>
 
-            <p class="now now-plain"><i data-lucide="link" aria-hidden="true"></i><span>이 경험은 외주로 만든 <a href="#proj-wordcloud">음성 인식 워드클라우드 장치</a>에서 Raspberry Pi 3B용 Yocto 이미지를 bitbake로 줄여 반응성을 맞추는 데로 이어졌습니다.</span></p>
+            <p class="now now-plain"><i data-lucide="link" aria-hidden="true"></i><span>부족한 보드에서 OS부터 줄인 실전 사례는 바로 아래 <a href="#f-wordcloud">음성 인식 워드클라우드 장치</a>입니다.</span></p>
 
             <ul class="chips">
               <li class="chip">ARM Cortex-A7</li><li class="chip">crosstool-ng</li><li class="chip">TF-A</li><li class="chip">U-Boot</li><li class="chip">Linux Kernel</li><li class="chip">BusyBox</li><li class="chip">FreeRTOS</li><li class="chip">GNU Binutils</li>
@@ -441,12 +631,87 @@
           </div>
         </article>
 
-        <!-- greeneye -->
-        <article id="f-greeneye" class="feature feature-flip">
+        <!-- wordcloud -->
+        <article id="f-wordcloud" class="feature feature-flip">
           <div class="feature-visual">
-            <figure class="feature-img">
-              <img src="assets/projects/GreenEye.webp" alt="GreenEye 센서 단말과 화분" loading="lazy" decoding="async">
-            </figure>
+            <div class="shots shots-pair">
+              <figure class="feature-img shot shot-low">
+                <button class="shot-btn" type="button" data-lightbox="assets/projects/워드-클라우드-현장.webp" data-alt="2022 문화자치 정책마켓 현장에 설치한 음성 인식 장치. 나무 케이스의 버튼과 마이크" aria-label="HW · 현장 장치 크게 보기">
+                  <img src="assets/projects/워드-클라우드-현장.webp" alt="2022 문화자치 정책마켓 현장에 설치한 음성 인식 장치. 나무 케이스의 버튼과 마이크" loading="lazy" decoding="async">
+                </button>
+                <figcaption class="shot-cap mono">HW · 현장 장치</figcaption>
+              </figure>
+              <figure class="feature-img shot">
+                <button class="shot-btn" type="button" data-lightbox="assets/projects/워드-클라우드.webp" data-alt="행사 현장 LED 전광판에 띄운 워드클라우드 결과" aria-label="결과 · LED 전광판 크게 보기">
+                  <img src="assets/projects/워드-클라우드.webp" alt="행사 현장 LED 전광판에 띄운 워드클라우드 결과" loading="lazy" decoding="async">
+                </button>
+                <figcaption class="shot-cap mono">결과 · LED 전광판</figcaption>
+              </figure>
+            </div>
+            <div class="flow" aria-label="워드클라우드 장치 실행 흐름">
+              <p class="flow-title mono">RASPBERRY PI 3B · YOCTO KIRKSTONE</p>
+              <div class="flow-row flow-row-2">
+                <div class="node node-mcu"><b>USB 마이크</b><span>ALSA 녹음</span></div>
+                <span class="edge mono">PCM</span>
+                <div class="node node-sbc"><b>Vosk</b><span>오프라인 한국어 인식</span></div>
+              </div>
+              <div class="flow-down"><span class="edge mono">단어 빈도</span></div>
+              <div class="flow-row flow-row-2">
+                <div class="node node-sbc"><b>WordCloud</b><span>빈도 렌더링</span></div>
+                <span class="edge mono">frame</span>
+                <div class="node node-ui"><b>pygame · SDL2</b><span>KMS/DRM 직접 출력</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-body">
+            <div class="feature-meta">
+              <span class="mono">2022.08 ~ 2022.11</span>
+              <span>개인 · 외주</span>
+            </div>
+            <h3 class="feature-title">음성 인식 워드클라우드 장치</h3>
+            <p class="feature-sub">Raspberry Pi 3B용 Yocto 경량 이미지 위의 현장 음성 인식 전시 장치</p>
+            <ul class="badges">
+              <li class="badge">2022 문화자치 정책마켓 현장 운영</li>
+            </ul>
+            <p class="feature-lead">지역 행사를 운영하는 청년 단체의 의뢰로, 현장 발언을 음성 인식해 단어 빈도대로 워드클라우드를 LED 전광판에 띄우는 장치를 만들었습니다. 예산 때문에 Raspberry Pi 3B를 써야 해서, 응용보다 먼저 그 아래에서 올라가는 OS부터 줄였습니다.</p>
+
+            <h4 class="mini-title">한 일</h4>
+            <ul class="bullets">
+              <li>Yocto Kirkstone <code>core-image-minimal</code>에 Vosk, WordCloud, pygame, 모델·폰트, systemd 서비스 레시피를 직접 작성해 필요한 구성만 담은 32비트 이미지를 bitbake로 빌드</li>
+              <li>X11과 Wayland를 빼고 libsdl2를 KMS/DRM 백엔드로 빌드해 디스플레이 서버 없이 화면에 직접 출력</li>
+              <li>USB 마이크를 ALSA로 녹음하고 Vosk로 한국어를 오프라인 인식해 네트워크 없는 현장에서도 동작</li>
+              <li>htop으로 스왑이 잦은 것을 확인하고 불필요한 데몬을 덜어 메모리와 CPU 여유 확보, 부트 인자와 환경변수 조정</li>
+            </ul>
+
+            <dl class="kv">
+              <div><dt class="mono">50s → 25s</dt><dd>부팅 시간 (20회 평균)</dd></div>
+              <div><dt class="mono">100s → 35s</dt><dd>음성 입력 종료부터 화면 표시까지 (50자, 50회 평균)</dd></div>
+            </dl>
+
+            <ul class="chips">
+              <li class="chip">Raspberry Pi 3B</li><li class="chip">Yocto</li><li class="chip">bitbake</li><li class="chip">systemd</li><li class="chip">ALSA</li><li class="chip">Vosk</li><li class="chip">SDL2 KMS/DRM</li><li class="chip">Python</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- greeneye -->
+        <article id="f-greeneye" class="feature">
+          <div class="feature-visual">
+            <div class="shots shots-pair">
+              <figure class="feature-img shot">
+                <button class="shot-btn" type="button" data-lightbox="assets/projects/GreenEye.webp" data-alt="GreenEye 센서 단말과 화분" aria-label="HW · 센서 단말 크게 보기">
+                  <img src="assets/projects/GreenEye.webp" alt="GreenEye 센서 단말과 화분" loading="lazy" decoding="async">
+                </button>
+                <figcaption class="shot-cap mono">HW · 센서 단말</figcaption>
+              </figure>
+              <figure class="feature-img shot">
+                <button class="shot-btn" type="button" data-lightbox="assets/projects/GreenEye-앱.webp" data-alt="GreenEye 앱 화면. 화분 갤러리, 환경·토양 센서 값, 조치 안내와 제어 모듈" aria-label="SW · 관리 앱 크게 보기">
+                  <img src="assets/projects/GreenEye-앱.webp" alt="GreenEye 앱 화면. 화분 갤러리, 환경·토양 센서 값, 조치 안내와 제어 모듈" loading="lazy" decoding="async">
+                </button>
+                <figcaption class="shot-cap mono">SW · 관리 앱</figcaption>
+              </figure>
+            </div>
             <div class="flow" aria-label="GreenEye 데이터 흐름">
               <p class="flow-title mono">DATA FLOW</p>
               <div class="flow-row">
@@ -500,7 +765,7 @@
     <section id="debug" class="section">
       <div class="wrap">
         <header class="sec-head">
-          <p class="sec-kicker mono">03 · DEBUG LOG</p>
+          <p class="sec-kicker mono">05 · DEBUG LOG</p>
           <h2 class="sec-title">문제 해결 기록</h2>
           <p class="sec-sub">짐작보다 확인할 수단을 먼저 만듭니다. 증상에서 원인까지 어떻게 좁혔는지 짧게 모았습니다.</p>
         </header>
@@ -573,15 +838,106 @@
       </div>
     </section>
 
-    <!-- archive -->
-    <section id="archive" class="section section-alt">
+    <!-- experience -->
+    <section id="experience" class="section section-alt">
       <div class="wrap">
         <header class="sec-head">
-          <p class="sec-kicker mono">04 · ARCHIVE</p>
+          <p class="sec-kicker mono">06 · EXPERIENCE</p>
+          <h2 class="sec-title">활동과 경력</h2>
+        </header>
+
+        <div class="exp-grid">
+          <ol class="timeline">
+          <li id="exp-anchor" class="t-item">
+            <span class="t-period mono">2026.06 ~ 현재</span>
+            <div class="t-main">
+              <h3 class="t-role">서울시 앵커사업 과제 수행</h3>
+              <p class="t-org">광운대학교</p>
+              <p class="t-desc">Scout2Map을 과제로 수행하며 펌웨어와 상위 플랫폼 연동을 맡고, 기업 멘토링 과정의 문서 관리를 함께 담당합니다.</p>
+            </div>
+          </li>
+          <li id="exp-admin" class="t-item">
+            <span class="t-period mono">2026.03 ~ 현재</span>
+            <div class="t-main">
+              <h3 class="t-role">행정조교</h3>
+              <p class="t-org">광운대학교 교육혁신원 성과관리팀</p>
+              <p class="t-desc">교육혁신원 성과관리 업무의 행정을 보조합니다.</p>
+            </div>
+          </li>
+          <li id="exp-army" class="t-item">
+            <span class="t-period mono">2023.02 ~ 2024.08</span>
+            <div class="t-main">
+              <h3 class="t-role">육군 병장 만기 전역</h3>
+              <p class="t-org">통신 · 정보체계운용</p>
+              
+            </div>
+          </li>
+          <li id="exp-kitel" class="t-item">
+            <span class="t-period mono">2021.04 ~ 현재</span>
+            <div class="t-main">
+              <h3 class="t-role">광운대 전자연구회 KITEL 45기</h3>
+              <p class="t-org">중앙 학술동아리</p>
+              <p class="t-desc">22년 기술부장. 전면 비대면이던 시기에 웹 회로 시뮬레이터와 IDE 시뮬레이션으로 보드 없이 실습하는 D/A·AVR·Arduino 세미나를 운영했습니다. 25년 AVR 세미나 강연. 4년간 동아리 작품전시회에 빠짐없이 출품했습니다.</p>
+            </div>
+          </li>
+          <li id="exp-mongsil" class="t-item">
+            <span class="t-period mono">2021.03 ~ 2022.12</span>
+            <div class="t-main">
+              <h3 class="t-role">길잡이 교사</h3>
+              <p class="t-org">의정부몽실학교</p>
+              <p class="t-desc">청소년 주도 공학 HW/SW 프로젝트 2회와 모델링·SW 교육 방과후 프로그램 4회를 기획·운영했습니다.</p>
+            </div>
+          </li>
+          <li id="exp-dream" class="t-item">
+            <span class="t-period mono">2021.03 ~ 2022.08</span>
+            <div class="t-main">
+              <h3 class="t-role">보조강사</h3>
+              <p class="t-org">의정부드림메이커</p>
+              <p class="t-desc">청소년 6개 팀의 HW/SW 개발 교육과 멘토링을 맡았습니다.</p>
+            </div>
+          </li>
+          <li id="exp-upcycle" class="t-item">
+            <span class="t-period mono">2020.11 ~ 2025.01</span>
+            <div class="t-main">
+              <h3 class="t-role">업사이클 엔지니어</h3>
+              <p class="t-org">도돌이표 플라스틱</p>
+              <p class="t-desc">플라스틱 분쇄기·사출기를 제작하고 빗·블록·S고리·키링을 모델링했습니다.</p>
+            </div>
+          </li>
+          <li id="exp-3014" class="t-item">
+            <span class="t-period mono">2018.03 ~ 2020.03</span>
+            <div class="t-main">
+              <h3 class="t-role">개발자</h3>
+              <p class="t-org">삼점일사 협동조합</p>
+              <p class="t-desc">쓰레기통 결합형 DID의 거점별 광고 플랫폼 SW와 웹, 하드웨어를 개발했습니다.</p>
+            </div>
+          </li>
+          </ol>
+
+          <aside class="cert-card">
+            <h3 class="side-title">자격</h3>
+            <ul class="certs">
+              <li><b>리눅스마스터 2급</b><span>한국정보통신진흥협회 · <span class="mono">2020.07</span></span></li>
+              <li><b>전자계산기기능사</b><span>현 임베디드기능사 · 한국산업인력공단 · <span class="mono">2020.08</span></span></li>
+              <li><b>정보처리기능사</b><span>현 프로그래밍기능사 · 한국산업인력공단 · <span class="mono">2020.05</span></span></li>
+              <li><b>OPIc 영어</b><span>ACTFL · <span class="mono">2026.09</span></span></li>
+              <li><b>운전면허 2종 보통</b><span class="mono">2024.09</span></li>
+            </ul>
+            <p class="cert-etc">민간 자격 · GTQ 2급, 사물인터넷지도사, 코딩지도사, 소프트웨어교육지도사</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- archive -->
+    <section id="archive" class="section">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-kicker mono">07 · ARCHIVE</p>
           <h2 class="sec-title">그 밖의 프로젝트</h2>
           <p class="sec-sub">고등학생 때부터 만들어 온 펌웨어·하드웨어·시스템·웹 작업입니다. 분류를 눌러 골라 볼 수 있습니다.</p>
         </header>
-        <div class="filters" role="group" aria-label="프로젝트 분류"><button type="button" class="filter is-active" data-filter="all" aria-pressed="true">전체 <span class="mono">22</span></button><button type="button" class="filter" data-filter="fw" aria-pressed="false">펌웨어·HW <span class="mono">13</span></button><button type="button" class="filter" data-filter="lib" aria-pressed="false">라이브러리 <span class="mono">3</span></button><button type="button" class="filter" data-filter="sys" aria-pressed="false">리눅스·시스템 <span class="mono">3</span></button><button type="button" class="filter" data-filter="web" aria-pressed="false">웹 외주 <span class="mono">3</span></button></div>
+        <div class="filters" role="group" aria-label="프로젝트 분류"><button type="button" class="filter is-active" data-filter="all" aria-pressed="true">전체 <span class="mono">21</span></button><button type="button" class="filter" data-filter="fw" aria-pressed="false">펌웨어·HW <span class="mono">13</span></button><button type="button" class="filter" data-filter="lib" aria-pressed="false">라이브러리 <span class="mono">3</span></button><button type="button" class="filter" data-filter="sys" aria-pressed="false">리눅스·시스템 <span class="mono">2</span></button><button type="button" class="filter" data-filter="web" aria-pressed="false">웹 외주 <span class="mono">3</span></button></div>
         <div class="archive-grid">
         <article id="proj-eeg" class="a-card" data-cat="sys">
           <div class="a-thumb"><img src="assets/awards/25-매치업-심화과정-경진대회-실무보고서.webp" alt="EEG 기반 숏폼 콘텐츠 영향 분석" loading="lazy" decoding="async"></div>
@@ -597,7 +953,7 @@
           </div>
         </article>
         <article id="proj-dgprotector" class="a-card" data-cat="fw">
-          <div class="a-thumb"><img src="assets/awards/25-ICT-융합-프로젝트-공모전.webp" alt="DG-Protector (착용형 자세 교정기)" loading="lazy" decoding="async"></div>
+          <div class="a-thumb a-thumb-pair"><img src="assets/awards/25-ICT-융합-프로젝트-공모전.webp" alt="DG-Protector 착용 모습 앞면" loading="lazy" decoding="async"><img src="assets/projects/DG-Protector.webp" alt="DG-Protector 등판 배선과 센서" loading="lazy" decoding="async"></div>
           <div class="a-body">
             <div class="a-meta"><span class="mono">2025.01 ~ 2025.03</span><span class="dot-sep" aria-hidden="true"></span><span>펌웨어·HW</span></div>
             <h3 class="a-title">DG-Protector (착용형 자세 교정기)</h3>
@@ -607,19 +963,6 @@
             <details class="more"><summary>자세히</summary><p>착용 직후 자세를 기준점으로 캘리브레이션한 뒤 편차를 감시합니다. 통신 파싱·자세 판정·권취 제어를 세 개의 자체 라이브러리로 분리했고, 경보음은 delay() 대신 millis() 기반 상태 머신으로 만들어 메인 루프가 멈추지 않게 했습니다. 모드는 EEPROM에 저장하고, Kotlin 안드로이드 앱에서 강도 제어와 착용 통계를 제공합니다.</p></details>
             <ul class="chips"><li class="chip">Arduino</li><li class="chip">C</li><li class="chip">I2C</li><li class="chip">Kotlin</li><li class="chip">Fusion 360</li></ul>
             <div class="card-links"><a class="link-btn" href="https://github.com/DG-Protector" target="_blank" rel="noopener"><svg class="gh" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a></div>
-          </div>
-        </article>
-        <article id="proj-wordcloud" class="a-card" data-cat="sys">
-          <div class="a-thumb"><img src="assets/projects/워드-클라우드.webp" alt="음성 인식 워드클라우드 장치 (외주)" loading="lazy" decoding="async"></div>
-          <div class="a-body">
-            <div class="a-meta"><span class="mono">2022.08 ~ 2022.11</span><span class="dot-sep" aria-hidden="true"></span><span>리눅스·시스템</span></div>
-            <h3 class="a-title">음성 인식 워드클라우드 장치 (외주)</h3>
-            
-            <p class="a-role">개인 · 외주</p>
-            <p class="a-sum">지역 행사를 운영하는 청년 단체의 의뢰로, 현장 발언을 음성 인식해 단어 단위로 파싱하고 워드클라우드로 띄우는 장치를 만들었습니다.</p>
-            <details class="more"><summary>자세히</summary><p>예산 때문에 Raspberry Pi 3B를 써야 했는데 범용 배포 이미지로는 현장에서 필요한 반응성이 나오지 않았습니다. Yocto로 필요한 구성만 담은 이미지를 bitbake로 빌드하고 부트 인자와 환경변수를 조정해 부팅과 응답을 줄였습니다. 보드가 부족할 때 응용보다 먼저 OS를 줄일 수 있다는 것을 배운 작업입니다.</p></details>
-            <ul class="chips"><li class="chip">Raspberry Pi 3B</li><li class="chip">Yocto</li><li class="chip">U-Boot</li><li class="chip">Python</li></ul>
-            
           </div>
         </article>
         <article id="proj-braille" class="a-card" data-cat="fw">
@@ -873,256 +1216,6 @@
       </div>
     </section>
 
-    <!-- awards -->
-    <section id="awards" class="section">
-      <div class="wrap">
-        <header class="sec-head">
-          <p class="sec-kicker mono">05 · AWARDS</p>
-          <h2 class="sec-title">수상</h2>
-          <p class="sec-sub">썸네일을 누르면 현장 사진이나 상장을 크게 볼 수 있습니다.</p>
-        </header>
-        <ul class="awards">
-          <li class="award award-top">
-            <button class="award-thumb" type="button" data-lightbox="assets/awards/26-아두이노-메이커-공모전.webp" aria-label="26&#x27; 아두이노 메이커 공모전 상장 보기">
-              <img src="assets/awards/26-아두이노-메이커-공모전.webp" alt="" loading="lazy" decoding="async">
-              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
-            </button>
-            <div class="award-body">
-              <p class="award-prize">대상</p>
-              <h3 class="award-contest">26&#x27; 아두이노 메이커 공모전</h3>
-              <p class="award-org">㈜엔티렉스(디바이스마트) 대표이사 <span class="mono">· 2026.09.04</span></p>
-              <a class="award-work" href="#f-raw2insight"><i data-lucide="corner-down-right" aria-hidden="true"></i>Raw2Insight-Q</a>
-            </div>
-          </li>
-          <li class="award award-high">
-            <button class="award-thumb" type="button" data-lightbox="assets/awards/26-졸업작품전시회-현장.webp" aria-label="2026학년도 컴퓨터정보공학부 졸업작품전시회 상장 보기">
-              <img src="assets/awards/26-졸업작품전시회-현장.webp" alt="" loading="lazy" decoding="async">
-              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
-            </button>
-            <div class="award-body">
-              <p class="award-prize">최우수상</p>
-              <h3 class="award-contest">2026학년도 컴퓨터정보공학부 졸업작품전시회</h3>
-              <p class="award-org">광운대학교 인공지능융합대학장 <span class="mono">· 2026.11.12</span></p>
-              <a class="award-work" href="#f-scout2map"><i data-lucide="corner-down-right" aria-hidden="true"></i>Scout2Map</a>
-            </div>
-          </li>
-          <li class="award award-high">
-            <button class="award-thumb" type="button" data-lightbox="assets/awards/26-산학연계-AI-프로젝트-현장.webp" aria-label="제1회 산학연계 AI 프로젝트 전시회 상장 보기">
-              <img src="assets/awards/26-산학연계-AI-프로젝트-현장.webp" alt="" loading="lazy" decoding="async">
-              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
-            </button>
-            <div class="award-body">
-              <p class="award-prize">최우수상</p>
-              <h3 class="award-contest">제1회 산학연계 AI 프로젝트 전시회</h3>
-              <p class="award-org">광운대학교 총장 <span class="mono">· 2026.11.12</span></p>
-              <a class="award-work" href="#f-scout2map"><i data-lucide="corner-down-right" aria-hidden="true"></i>Scout2Map</a>
-            </div>
-          </li>
-          <li class="award award-high">
-            <button class="award-thumb" type="button" data-lightbox="assets/awards/25-매치업-심화과정-경진대회-실무보고서.webp" aria-label="제4회 매치업 심화과정 경진대회 상장 보기">
-              <img src="assets/awards/25-매치업-심화과정-경진대회-실무보고서.webp" alt="" loading="lazy" decoding="async">
-              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
-            </button>
-            <div class="award-body">
-              <p class="award-prize">최우수상 · 실무보고서부문</p>
-              <h3 class="award-contest">제4회 매치업 심화과정 경진대회</h3>
-              <p class="award-org">한국디지털헬스산업협회장 <span class="mono">· 2025.12.05</span></p>
-              <a class="award-work" href="#proj-eeg"><i data-lucide="corner-down-right" aria-hidden="true"></i>EEG 숏폼 영향 분석</a>
-            </div>
-          </li>
-          <li class="award award-mid">
-            <button class="award-thumb" type="button" data-lightbox="assets/awards/25-매치업-심화과정-경진대회-포스터.webp" aria-label="제4회 매치업 심화과정 경진대회 상장 보기">
-              <img src="assets/awards/25-매치업-심화과정-경진대회-포스터.webp" alt="" loading="lazy" decoding="async">
-              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
-            </button>
-            <div class="award-body">
-              <p class="award-prize">우수상 · 포스터부문</p>
-              <h3 class="award-contest">제4회 매치업 심화과정 경진대회</h3>
-              <p class="award-org">광운대학교 교육혁신원장 <span class="mono">· 2025.12.05</span></p>
-              <a class="award-work" href="#proj-eeg"><i data-lucide="corner-down-right" aria-hidden="true"></i>EEG 숏폼 영향 분석</a>
-            </div>
-          </li>
-          <li class="award award-mid">
-            <button class="award-thumb" type="button" data-lightbox="assets/awards/25-ICT-융합-프로젝트-공모전.webp" aria-label="25&#x27; ICT 융합 프로젝트 공모전 상장 보기">
-              <img src="assets/awards/25-ICT-융합-프로젝트-공모전.webp" alt="" loading="lazy" decoding="async">
-              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
-            </button>
-            <div class="award-body">
-              <p class="award-prize">장려상</p>
-              <h3 class="award-contest">25&#x27; ICT 융합 프로젝트 공모전</h3>
-              <p class="award-org">㈜엔티렉스(디바이스마트) 대표이사 <span class="mono">· 2025.07.22</span></p>
-              <a class="award-work" href="#proj-dgprotector"><i data-lucide="corner-down-right" aria-hidden="true"></i>DG-Protector</a>
-            </div>
-          </li>
-          <li class="award award-mid">
-            <button class="award-thumb" type="button" data-lightbox="assets/awards/22-몽실학교-수업-현장.webp" aria-label="몽실학교 교육활동 활성화 유공 상장 보기">
-              <img src="assets/awards/22-몽실학교-수업-현장.webp" alt="" loading="lazy" decoding="async">
-              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
-            </button>
-            <div class="award-body">
-              <p class="award-prize">표창</p>
-              <h3 class="award-contest">몽실학교 교육활동 활성화 유공</h3>
-              <p class="award-org">경기도교육감 <span class="mono">· 2022.12.31</span></p>
-              <a class="award-work" href="#exp-mongsil"><i data-lucide="corner-down-right" aria-hidden="true"></i>청소년 주도 메이커 프로젝트 2년 운영</a>
-            </div>
-          </li>
-          <li class="award award-mid">
-            <button class="award-thumb" type="button" data-lightbox="assets/awards/21-광운대-공학설계입문-전시회.webp" aria-label="공학설계입문 작품전시회 상장 보기">
-              <img src="assets/awards/21-광운대-공학설계입문-전시회.webp" alt="" loading="lazy" decoding="async">
-              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
-            </button>
-            <div class="award-body">
-              <p class="award-prize">우수상</p>
-              <h3 class="award-contest">공학설계입문 작품전시회</h3>
-              <p class="award-org">광운대학교 소프트웨어융합대학장 <span class="mono">· 2021.06.21</span></p>
-              <a class="award-work" href="#proj-braille"><i data-lucide="corner-down-right" aria-hidden="true"></i>RFID 횡단보도 음향 신호기</a>
-            </div>
-          </li>
-          <li class="award award-mid">
-            <button class="award-thumb" type="button" data-lightbox="assets/awards/19-경기도-청소년-꿈나무-메이커톤.webp" aria-label="경기도 청소년 꿈나무 메이커톤 상장 보기">
-              <img src="assets/awards/19-경기도-청소년-꿈나무-메이커톤.webp" alt="" loading="lazy" decoding="async">
-              <span class="zoom"><i data-lucide="maximize-2" aria-hidden="true"></i></span>
-            </button>
-            <div class="award-body">
-              <p class="award-prize">우수상</p>
-              <h3 class="award-contest">경기도 청소년 꿈나무 메이커톤</h3>
-              <p class="award-org">융합과학교육협회 이사장 <span class="mono">· 2019</span></p>
-              <a class="award-work" href="#proj-did-sign"><i data-lucide="corner-down-right" aria-hidden="true"></i>DID형 자전거 산책로 표지판</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- education -->
-    <section id="education" class="section section-alt">
-      <div class="wrap">
-        <header class="sec-head">
-          <p class="sec-kicker mono">06 · EDUCATION</p>
-          <h2 class="sec-title">학력과 관련 교과</h2>
-        </header>
-
-        <div class="edu-grid">
-          <div class="edu-card">
-            <p class="mono edu-period">2021.03 ~ 2027.02</p>
-            <h3 class="edu-school">광운대학교 <span class="pill">졸업예정</span></h3>
-            <p class="edu-major">컴퓨터정보공학부 컴퓨터공학전공</p>
-            <dl class="edu-gpa">
-              <div><dt>전공 평점</dt><dd class="mono">3.72 <small>/ 4.5</small></dd></div>
-              <div><dt>전체 평점</dt><dd class="mono">3.63 <small>/ 4.5</small></dd></div>
-              <div><dt>이수 학점</dt><dd class="mono">124</dd></div>
-            </dl>
-          </div>
-          <div class="edu-card">
-            <p class="mono edu-period">2018.03 ~ 2021.02</p>
-            <h3 class="edu-school">경민IT고등학교</h3>
-            <p class="edu-major">디지털미디어과</p>
-            <p class="edu-note">중학교 동아리에서 MCU 보드로 임베디드를 처음 접하고 특성화고를 택했습니다. 리눅스마스터를 준비하며 Raspberry Pi로 OS와 커널, 드라이버에 관심이 생겨 컴퓨터공학으로 진학했습니다.</p>
-          </div>
-        </div>
-
-        <div class="table-wrap">
-          <table class="courses">
-            <caption class="sr-only">직무 관련 교과목</caption>
-            <thead><tr><th scope="col">교과목</th><th scope="col">학기</th><th scope="col">성적</th><th scope="col">다룬 내용</th></tr></thead>
-            <tbody><tr><th scope="row">임베디드시스템S/W설계</th><td class="mono">2026-1</td><td><span class="grade grade-top">A+</span></td><td>STM32MP157에 툴체인·TF-A·U-Boot·커널·rootfs를 쌓아 부팅, FreeRTOS 큐에 긴급 메시지 API 추가</td></tr><tr><th scope="row">산학협력캡스톤설계</th><td class="mono">2026-1</td><td><span class="grade grade-top">A+</span></td><td>Scout2Map 주행 제어·센서 퓨전 펌웨어와 ROS 2 통합</td></tr><tr><th scope="row">시스템프로그래밍 / 실습</th><td class="mono">2025-1</td><td><span class="grade">A0 / A+</span></td><td>HTTP 프록시 서버를 단계적으로 구현: SHA1 캐시, 연결당 자식 프로세스, 시그널 타임아웃, pthread 로깅과 세마포어</td></tr><tr><th scope="row">운영체제 / 실습</th><td class="mono">2025-2</td><td><span class="grade">B+ / A0</span></td><td>시스템 콜 추가와 커널 재빌드, 시스템 콜 테이블 후킹 모듈, task_struct·fork 경로 추적, 스케줄러 구현 비교</td></tr><tr><th scope="row">GPU컴퓨팅</th><td class="mono">2026-1</td><td><span class="grade">B+</span></td><td>OpenMP 스케줄링 비교, CUDA 행렬 곱 Global·Shared Memory 타일링과 CPU 결과 자동 교차 검증</td></tr><tr><th scope="row">마이크로프로세서</th><td class="mono">2026-2</td><td><span class="grade">수강 중</span></td><td>Jetson Nano·Raspberry Pi·ZYNQ 실습: ARM 어셈블리·C 연동, 카메라 제어, TensorRT 추론, Zynq HW/SW 설계</td></tr><tr><th scope="row">디지털신호처리</th><td class="mono">2025-2</td><td><span class="grade">B+</span></td><td>MATLAB 디지털 필터 설계</td></tr></tbody>
-          </table>
-        </div>
-        <p class="course-note">그 밖의 전공 기초 · 어셈블리프로그램설계및실습 <b>A+</b>, 데이터구조설계 <b>A0</b> / 실습 <b>A+</b>, 전자회로 <b>A0</b>, 컴퓨터네트워크 <b>B+</b>, 컴퓨터구조 <b>B0</b></p>
-      </div>
-    </section>
-
-    <!-- experience -->
-    <section id="experience" class="section">
-      <div class="wrap">
-        <header class="sec-head">
-          <p class="sec-kicker mono">07 · EXPERIENCE</p>
-          <h2 class="sec-title">활동과 경력</h2>
-        </header>
-
-        <div class="exp-grid">
-          <ol class="timeline">
-          <li id="exp-anchor" class="t-item">
-            <span class="t-period mono">2026.06 ~ 현재</span>
-            <div class="t-main">
-              <h3 class="t-role">서울시 앵커사업 과제 수행</h3>
-              <p class="t-org">광운대학교</p>
-              <p class="t-desc">Scout2Map을 과제로 수행하며 펌웨어와 상위 플랫폼 연동을 맡고, 기업 멘토링 과정의 문서 관리를 함께 담당합니다.</p>
-            </div>
-          </li>
-          <li id="exp-admin" class="t-item">
-            <span class="t-period mono">2026.03 ~ 현재</span>
-            <div class="t-main">
-              <h3 class="t-role">행정조교</h3>
-              <p class="t-org">광운대학교 교육혁신원 성과관리팀</p>
-              <p class="t-desc">교육혁신원 성과관리 업무의 행정을 보조합니다.</p>
-            </div>
-          </li>
-          <li id="exp-army" class="t-item">
-            <span class="t-period mono">2023.02 ~ 2024.08</span>
-            <div class="t-main">
-              <h3 class="t-role">육군 병장 만기 전역</h3>
-              <p class="t-org">통신 · 정보체계운용</p>
-              
-            </div>
-          </li>
-          <li id="exp-kitel" class="t-item">
-            <span class="t-period mono">2021.04 ~ 현재</span>
-            <div class="t-main">
-              <h3 class="t-role">광운대 전자연구회 KITEL 45기</h3>
-              <p class="t-org">중앙 학술동아리</p>
-              <p class="t-desc">22년 기술부장. 전면 비대면이던 시기에 웹 회로 시뮬레이터와 IDE 시뮬레이션으로 보드 없이 실습하는 D/A·AVR·Arduino 세미나를 운영했습니다. 25년 AVR 세미나 강연. 4년간 동아리 작품전시회에 빠짐없이 출품했습니다.</p>
-            </div>
-          </li>
-          <li id="exp-mongsil" class="t-item">
-            <span class="t-period mono">2021.03 ~ 2022.12</span>
-            <div class="t-main">
-              <h3 class="t-role">길잡이 교사</h3>
-              <p class="t-org">의정부몽실학교</p>
-              <p class="t-desc">청소년 주도 공학 HW/SW 프로젝트 2회와 모델링·SW 교육 방과후 프로그램 4회를 기획·운영했습니다.</p>
-            </div>
-          </li>
-          <li id="exp-dream" class="t-item">
-            <span class="t-period mono">2021.03 ~ 2022.08</span>
-            <div class="t-main">
-              <h3 class="t-role">보조강사</h3>
-              <p class="t-org">의정부드림메이커</p>
-              <p class="t-desc">청소년 6개 팀의 HW/SW 개발 교육과 멘토링을 맡았습니다.</p>
-            </div>
-          </li>
-          <li id="exp-upcycle" class="t-item">
-            <span class="t-period mono">2020.11 ~ 2025.01</span>
-            <div class="t-main">
-              <h3 class="t-role">업사이클 엔지니어</h3>
-              <p class="t-org">도돌이표 플라스틱</p>
-              <p class="t-desc">플라스틱 분쇄기·사출기를 제작하고 빗·블록·S고리·키링을 모델링했습니다.</p>
-            </div>
-          </li>
-          <li id="exp-3014" class="t-item">
-            <span class="t-period mono">2018.03 ~ 2020.03</span>
-            <div class="t-main">
-              <h3 class="t-role">개발자</h3>
-              <p class="t-org">삼점일사 협동조합</p>
-              <p class="t-desc">쓰레기통 결합형 DID의 거점별 광고 플랫폼 SW와 웹, 하드웨어를 개발했습니다.</p>
-            </div>
-          </li>
-          </ol>
-
-          <aside class="cert-card">
-            <h3 class="side-title">자격</h3>
-            <ul class="certs">
-              <li><b>리눅스마스터 2급</b><span>한국정보통신진흥협회 · <span class="mono">2020.07</span></span></li>
-              <li><b>전자계산기기능사</b><span>현 임베디드기능사 · 한국산업인력공단 · <span class="mono">2020.08</span></span></li>
-              <li><b>정보처리기능사</b><span>현 프로그래밍기능사 · 한국산업인력공단 · <span class="mono">2020.05</span></span></li>
-              <li><b>OPIc 영어</b><span>ACTFL · <span class="mono">2026.09</span></span></li>
-              <li><b>운전면허 2종 보통</b><span class="mono">2024.09</span></li>
-            </ul>
-            <p class="cert-etc">민간 자격 · GTQ 2급, 사물인터넷지도사, 코딩지도사, 소프트웨어교육지도사</p>
-          </aside>
-        </div>
-      </div>
-    </section>
-
     <!-- contact -->
     <section id="contact" class="section contact">
       <div class="wrap contact-inner">
@@ -1145,9 +1238,9 @@
     </div>
   </footer>
 
-  <dialog id="lightbox" class="lightbox" aria-label="상장 원본">
+  <dialog id="lightbox" class="lightbox" aria-label="수상 이미지 크게 보기">
     <button type="button" class="icon-btn lightbox-close" aria-label="닫기"><i data-lucide="x" aria-hidden="true"></i></button>
-    <img src="" alt="상장 원본">
+    <img src="" alt="">
   </dialog>
 </body>
 </html>
